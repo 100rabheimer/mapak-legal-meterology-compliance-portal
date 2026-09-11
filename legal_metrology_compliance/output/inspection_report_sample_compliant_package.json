@@ -1,0 +1,91 @@
+{
+  "status": "COMPLIANT",
+  "compliance_score": 100.0,
+  "total_checks": 9,
+  "passed_count": 6,
+  "violations_count": 0,
+  "warnings_count": 0,
+  "violations": [],
+  "warnings": [],
+  "passed_checks": [
+    {
+      "field": "Manufacturer / Packer / Importer Name & Address",
+      "field_key": "mfg_name_address",
+      "rule_id": "RULE_6_MFG_DETAILS",
+      "raw_text": "Apex Foods Ltd., Plot 45, Okhla",
+      "bbox": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "field": "Net Quantity Declaration",
+      "field_key": "net_quantity",
+      "rule_id": "RULE_6_NET_QTY",
+      "raw_text": "NET QTY: 1 L (910 g)",
+      "bbox": [
+        260,
+        55,
+        305,
+        945
+      ]
+    },
+    {
+      "field": "Maximum Retail Price (MRP)",
+      "field_key": "mrp",
+      "rule_id": "RULE_6_MRP",
+      "raw_text": "MRP: Rs. 185.00 (Incl. of all taxes)",
+      "bbox": [
+        305,
+        55,
+        348,
+        945
+      ]
+    },
+    {
+      "field": "Date of Manufacture / Packaging",
+      "field_key": "mfg_date",
+      "rule_id": "RULE_6_MFG_DATE",
+      "raw_text": "Date of Manufacture: 08/2026",
+      "bbox": [
+        390,
+        68,
+        422,
+        492
+      ]
+    },
+    {
+      "field": "Country of Origin",
+      "field_key": "country_of_origin",
+      "rule_id": "RULE_6_COO",
+      "raw_text": "Country of Origin: India",
+      "bbox": [
+        428,
+        68,
+        462,
+        401
+      ]
+    },
+    {
+      "field": "Consumer Care / Grievance Details",
+      "field_key": "consumer_care",
+      "rule_id": "RULE_6_CONSUMER_CARE",
+      "raw_text": "Consumer Care: Care Manager, Apex Foods, Call: 1800-11-9999,",
+      "bbox": [
+        465,
+        68,
+        501,
+        1000
+      ]
+    }
+  ],
+  "pdp_summary": {
+    "pdp_area_cm2": 203.39,
+    "canvas_size_px": [
+      800,
+      1000
+    ]
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "status": "NON_COMPLIANT",
+  "compliance_score": 66.7,
+  "total_checks": 9,
+  "passed_count": 6,
+  "violations_count": 3,
+  "warnings_count": 0,
+  "violations": [
+    {
+      "field": "Net Quantity Unit Symbol",
+      "field_key": "net_quantity",
+      "severity": "HIGH",
+      "rule_id": "RULE_13",
+      "clause": "Rule 13",
+      "issue": "Prohibited unit symbol 'GMS' used in Net Qty declaration 'NET QTY: 500 GMS'. Mandatory standard symbol is 'g'.",
+      "statutory_ref": "Rule 13: Standard units of weight & measure (Use 'g' instead of 'GMS')",
+      "source_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Sphygmomanomneters%20General%20Rules_1754973919.pdf",
+      "bbox": [
+        261,
+        56,
+        303,
+        946
+      ]
+    },
+    {
+      "field": "MRP Tax Inclusion Declaration",
+      "field_key": "mrp",
+      "severity": "MEDIUM",
+      "rule_id": "RULE_6_MRP",
+      "clause": "Rule 6(1)(e)",
+      "issue": "MRP declaration 'MRP: Rs 350' missing mandatory phrase '(Inclusive of all taxes)'.",
+      "statutory_ref": "Rule 6(1)(e): Price declaration must explicitly state 'Inclusive of all taxes'",
+      "source_url": "file:///C:/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/output/Consolidated_Legal_Metrology_Rulebook_Human.pdf",
+      "bbox": [
+        308,
+        56,
+        350,
+        946
+      ]
+    },
+    {
+      "field": "Unit Sale Price (USP)",
+      "field_key": "unit_sale_price",
+      "severity": "HIGH",
+      "rule_id": "RULE_6_USP",
+      "clause": "Rule 6(1)(ea)",
+      "issue": "Missing mandatory Unit Sale Price (USP) declaration (e.g. \u20b9/g, \u20b9/ml, \u20b9/N). Mandatory for all pre-packaged commodities.",
+      "statutory_ref": "Rule 6(1)(ea) (Amended via G.S.R. 779(E)): Unit Sale Price mandatory on all packages",
+      "source_url": "file:///C:/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/output/Consolidated_Legal_Metrology_Rulebook_Human.pdf",
+      "bbox": null
+    }
+  ],
+  "warnings": [],
+  "passed_checks": [
+    {
+      "field": "Manufacturer / Packer / Importer Name & Address",
+      "field_key": "mfg_name_address",
+      "rule_id": "RULE_6_MFG_DETAILS",
+      "raw_text": "QuickSnacks Pvt Ltd, Sector 62, Noida",
+      "bbox": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "field": "Net Quantity Declaration",
+      "field_key": "net_quantity",
+      "rule_id": "RULE_6_NET_QTY",
+      "raw_text": "NET QTY: 500 GMS",
+      "bbox": [
+        261,
+        56,
+        303,
+        946
+      ]
+    },
+    {
+      "field": "Maximum Retail Price (MRP)",
+      "field_key": "mrp",
+      "rule_id": "RULE_6_MRP",
+      "raw_text": "MRP: Rs 350",
+      "bbox": [
+        308,
+        56,
+        350,
+        946
+      ]
+    },
+    {
+      "field": "Date of Manufacture / Packaging",
+      "field_key": "mfg_date",
+      "rule_id": "RULE_6_MFG_DATE",
+      "raw_text": "Date of Pkd: 07/2026",
+      "bbox": [
+        358,
+        67,
+        382,
+        367
+      ]
+    },
+    {
+      "field": "Country of Origin",
+      "field_key": "country_of_origin",
+      "rule_id": "RULE_6_COO",
+      "raw_text": "Country of Origin: India",
+      "bbox": [
+        397,
+        67,
+        423,
+        397
+      ]
+    },
+    {
+      "field": "Consumer Care / Grievance Details",
+      "field_key": "consumer_care",
+      "rule_id": "RULE_6_CONSUMER_CARE",
+      "raw_text": "Customer Care: Email: support@quicksnacks.com",
+      "bbox": [
+        435,
+        67,
+        461,
+        786
+      ]
+    }
+  ],
+  "pdp_summary": {
+    "pdp_area_cm2": 200.69,
+    "canvas_size_px": [
+      800,
+      1000
+    ]
+  }
+}

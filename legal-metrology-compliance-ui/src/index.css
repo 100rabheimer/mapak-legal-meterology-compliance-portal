@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --shadow-card: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50 font-sans text-slate-900 antialiased;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    @apply focus:outline-none;
+  }
+}
+
+@layer components {
+  .app-card {
+    @apply rounded-2xl border border-slate-200 bg-white shadow-card;
+  }
+
+  .page-title {
+    @apply text-2xl font-bold tracking-tight text-slate-900;
+  }
+
+  .page-description {
+    @apply mt-1 text-sm leading-6 text-slate-500;
+  }
+
+  .form-input {
+    @apply w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-100;
+  }
+}

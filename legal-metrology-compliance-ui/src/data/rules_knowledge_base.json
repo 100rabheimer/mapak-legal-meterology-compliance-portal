@@ -1,0 +1,179 @@
+{
+  "systemTitle": "Department of Consumer Affairs (DoCA) Legal Metrology Rules Knowledge Base",
+  "statutoryActs": [
+    "Legal Metrology Act, 2009 (No. 1 of 2010)",
+    "Legal Metrology (Packaged Commodities) Rules, 2011",
+    "Gazette Amendments (2017 - 2026)"
+  ],
+  "totalMasterRules": 49,
+  "mandatoryDeclarations": [
+    {
+      "id": "RULE-6-1-A",
+      "ruleNumber": "Rule 6(1)(a)",
+      "title": "Manufacturer / Packer / Importer Identity and Address",
+      "description": "Name and complete address of the manufacturer, packer, or importer must be clearly declared on every package.",
+      "required": true,
+      "examples": ["Manufactured by: GreenCare Pvt. Ltd., Plot 14, MIDC, Mumbai - 400093"],
+      "penaltySection": "Section 36(1) of Legal Metrology Act, 2009"
+    },
+    {
+      "id": "RULE-6-1-B",
+      "ruleNumber": "Rule 6(1)(b)",
+      "title": "Common or Generic Product Name",
+      "description": "The generic or common name of the commodity contained in the package must be prominently declared.",
+      "required": true,
+      "examples": ["Herbal Shampoo", "Packaged Wheat Flour", "Green Tea Leaves"],
+      "penaltySection": "Section 36(1) of Legal Metrology Act, 2009"
+    },
+    {
+      "id": "RULE-6-1-C",
+      "ruleNumber": "Rule 6(1)(c)",
+      "title": "Net Quantity in Standard SI Metric Units",
+      "description": "Net quantity declared in metric SI units using legal symbols (g, kg, ml, l, L, m, N). Illegal symbols like gms, ltr, nos are strictly prohibited.",
+      "required": true,
+      "examples": ["180 ml", "500 g", "1 kg", "2.5 m"],
+      "penaltySection": "Section 36(1) read with Rule 11"
+    },
+    {
+      "id": "RULE-6-1-D",
+      "ruleNumber": "Rule 6(1)(d)",
+      "title": "Month and Year of Manufacture / Packing / Import",
+      "description": "Month and year in which the commodity is manufactured, packed, or imported (MM/YYYY or Month YYYY format).",
+      "required": true,
+      "examples": ["08/2026", "Aug 2026", "08-2026"],
+      "penaltySection": "Section 36(1) of Legal Metrology Act, 2009"
+    },
+    {
+      "id": "RULE-6-1-E",
+      "ruleNumber": "Rule 6(1)(e)",
+      "title": "Maximum Retail Price (MRP) with Inclusive Tax Phrase",
+      "description": "Maximum Retail Price in Indian Rupees (₹ or Rs.) inclusive of all taxes. Tax inclusion phrase 'incl. of all taxes' or 'inclusive of all taxes' is mandatory.",
+      "required": true,
+      "mandatoryTaxPhrase": ["incl. of all taxes", "inclusive of all taxes"],
+      "examples": ["MRP ₹199.00 (incl. of all taxes)", "MRP Rs 250.00 (inclusive of all taxes)"],
+      "penaltySection": "Section 36(1) read with Rule 6(1)(e)"
+    },
+    {
+      "id": "RULE-6-1-F",
+      "ruleNumber": "Rule 6(1)(f)",
+      "title": "Unit Sale Price (USP)",
+      "description": "Unit sale price declared in Rupees per gram/ml/piece for commodities exceeding 1g or 1ml to facilitate price comparison.",
+      "required": true,
+      "examples": ["₹1.10 / ml", "₹0.40 / g", "₹5.00 / piece"],
+      "penaltySection": "Section 36(1) (2022 Amendment)"
+    },
+    {
+      "id": "RULE-6-1-G",
+      "ruleNumber": "Rule 6(1)(g)",
+      "title": "Consumer Care Grievance Redressal Contact Details",
+      "description": "Name, complete address, telephone number, and email address of the person or officer who can be contacted in case of consumer complaints.",
+      "required": true,
+      "mandatoryFields": ["phone", "email", "address"],
+      "examples": ["Consumer Care: Manager, GreenCare, Toll-Free: 1800-111-2233, Email: care@greencare.in"],
+      "penaltySection": "Section 36(1) of Legal Metrology Act, 2009"
+    },
+    {
+      "id": "RULE-6-1-H",
+      "ruleNumber": "Rule 6(1)(h)",
+      "title": "Country of Origin (for Imported Commodities)",
+      "description": "Name of the country of origin where the product was produced or manufactured.",
+      "required": true,
+      "examples": ["Country of Origin: India", "Made in India", "Country of Origin: Vietnam"],
+      "penaltySection": "Section 36(1) read with 2020 Amendment"
+    }
+  ],
+  "rule7FontHeightTable": [
+    {
+      "pdpAreaRangeSqCm": "A <= 50",
+      "minPdpAreaSqCm": 0,
+      "maxPdpAreaSqCm": 50,
+      "minGeneralFontHeightMm": 1.0,
+      "minNetQtyNumeralHeightMm": 1.5
+    },
+    {
+      "pdpAreaRangeSqCm": "50 < A <= 100",
+      "minPdpAreaSqCm": 50.01,
+      "maxPdpAreaSqCm": 100,
+      "minGeneralFontHeightMm": 1.5,
+      "minNetQtyNumeralHeightMm": 2.0
+    },
+    {
+      "pdpAreaRangeSqCm": "100 < A <= 500",
+      "minPdpAreaSqCm": 100.01,
+      "maxPdpAreaSqCm": 500,
+      "minGeneralFontHeightMm": 2.5,
+      "minNetQtyNumeralHeightMm": 4.0
+    },
+    {
+      "pdpAreaRangeSqCm": "A > 500",
+      "minPdpAreaSqCm": 500.01,
+      "maxPdpAreaSqCm": 10000,
+      "minGeneralFontHeightMm": 4.0,
+      "minNetQtyNumeralHeightMm": 6.0
+    }
+  ],
+  "rule11MetricUnits": {
+    "validSymbols": {
+      "mass": ["g", "kg", "mg"],
+      "volume": ["ml", "l", "L", "cl"],
+      "length": ["mm", "cm", "m"],
+      "area": ["sq cm", "sq m"],
+      "count": ["N", "U"]
+    },
+    "blacklistedSymbols": [
+      "gms",
+      "gms.",
+      "gm",
+      "gm.",
+      "g.m.s",
+      "ltr",
+      "ltrs",
+      "ltr.",
+      "lit",
+      "liter",
+      "liters",
+      "kilos",
+      "kgs.",
+      "nos",
+      "nos.",
+      "pcs",
+      "pcs.",
+      "units"
+    ]
+  },
+  "specialIndustryProvisions": [
+    {
+      "category": "Garments and Hosiery",
+      "ruleRef": "Rule 13(2)",
+      "requirement": "Size in cm or standard international size code (S, M, L, XL) along with chest/waist measurement."
+    },
+    {
+      "category": "E-Commerce Marketplaces",
+      "ruleRef": "Rule 6(10)",
+      "requirement": "All Rule 6(1) declarations must be displayed digitally on the e-commerce product detail page prior to purchase."
+    },
+    {
+      "category": "Edible Oils and Vanaspati",
+      "ruleRef": "Rule 18",
+      "requirement": "Net quantity must be declared by volume in litres/ml along with mass in kg/g at standard packing temperature."
+    }
+  ],
+  "statutoryPenalties": {
+    "firstOffence": {
+      "maxFineINR": 25000,
+      "sectionRef": "Section 36(1)",
+      "description": "Fine up to ₹25,000 for manufacturing, packing, importing, or selling non-compliant commodities."
+    },
+    "secondOffence": {
+      "maxFineINR": 50000,
+      "sectionRef": "Section 36(1)",
+      "description": "Fine up to ₹50,000 for second offence."
+    },
+    "subsequentOffence": {
+      "maxFineINR": 100000,
+      "imprisonmentMonths": 12,
+      "sectionRef": "Section 36(1)",
+      "description": "Fine up to ₹1,00,000 or imprisonment up to 1 year, or both."
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "is_compliant": true,
+  "compliance_score": 100,
+  "status": "PASS",
+  "summary": {
+    "total_mandatory_fields_checked": 8,
+    "compliant_fields_count": 8,
+    "non_compliant_fields_count": 0,
+    "total_violations_found": 0
+  },
+  "compliant_fields": [
+    "manufacturer_details",
+    "generic_name",
+    "net_quantity",
+    "mfg_date",
+    "mrp",
+    "usp",
+    "customer_care",
+    "country_of_origin"
+  ],
+  "non_compliant_fields": [],
+  "violations": [],
+  "rule_engine_metadata": {
+    "rules_baseline": "Legal Metrology (Packaged Commodities) Rules, 2011 + Gazette Amendments",
+    "master_kb_loaded": false,
+    "rule_6_source_pdf": null,
+    "rule_6_source_url": null
+  }
+}

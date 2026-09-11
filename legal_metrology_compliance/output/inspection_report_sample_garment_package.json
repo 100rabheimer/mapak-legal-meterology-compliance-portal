@@ -1,0 +1,91 @@
+{
+  "status": "COMPLIANT",
+  "compliance_score": 100.0,
+  "total_checks": 9,
+  "passed_count": 6,
+  "violations_count": 0,
+  "warnings_count": 0,
+  "violations": [],
+  "warnings": [],
+  "passed_checks": [
+    {
+      "field": "Manufacturer / Packer / Importer Name & Address",
+      "field_key": "mfg_name_address",
+      "rule_id": "RULE_6_MFG_DETAILS",
+      "raw_text": "Urban Stitcher Co., Ludhiana, Punjab - 141001",
+      "bbox": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "field": "Net Quantity Declaration",
+      "field_key": "net_quantity",
+      "rule_id": "RULE_6_NET_QTY",
+      "raw_text": "NET QTY: 1 N (1 Piece)",
+      "bbox": [
+        385,
+        56,
+        425,
+        945
+      ]
+    },
+    {
+      "field": "Maximum Retail Price (MRP)",
+      "field_key": "mrp",
+      "rule_id": "RULE_6_MRP",
+      "raw_text": "MRP: Rs. 999.00 (Incl. of all taxes)",
+      "bbox": [
+        429,
+        56,
+        469,
+        945
+      ]
+    },
+    {
+      "field": "Date of Manufacture / Packaging",
+      "field_key": "mfg_date",
+      "rule_id": "RULE_6_MFG_DATE",
+      "raw_text": "06/2026",
+      "bbox": [
+        513,
+        67,
+        541,
+        332
+      ]
+    },
+    {
+      "field": "Country of Origin",
+      "field_key": "country_of_origin",
+      "rule_id": "RULE_6_COO",
+      "raw_text": "India",
+      "bbox": [
+        552,
+        67,
+        580,
+        399
+      ]
+    },
+    {
+      "field": "Consumer Care / Grievance Details",
+      "field_key": "consumer_care",
+      "rule_id": "RULE_6_CONSUMER_CARE",
+      "raw_text": "Consumer Care: Consumer Officer, Call: 0161-2400123, Email: he",
+      "bbox": [
+        590,
+        67,
+        618,
+        990
+      ]
+    }
+  ],
+  "pdp_summary": {
+    "pdp_area_cm2": 201.23,
+    "canvas_size_px": [
+      800,
+      1000
+    ]
+  }
+}

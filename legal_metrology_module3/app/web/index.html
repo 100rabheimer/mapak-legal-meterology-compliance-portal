@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DoCA Legal Metrology Enforcement Officer Dashboard (Module 3)</title>
+  <link rel="stylesheet" href="/static/css/dashboard.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚖️</text></svg>">
+</head>
+<body>
+
+  <!-- Official Government of India Header Banner -->
+  <header class="gov-banner">
+    <div class="banner-content">
+      <div class="banner-left">
+        <div class="emblem-icon">⚖️</div>
+        <div class="gov-titles">
+          <h1>Department of Consumer Affairs • Legal Metrology Division</h1>
+          <p>Government of India • Ministry of Consumer Affairs, Food & Public Distribution | SIH PS 26034</p>
+        </div>
+      </div>
+      <div class="banner-right">
+        <div class="officer-badge">
+          <div class="officer-name">Sh. R. K. Verma</div>
+          <div class="officer-role">Assistant Controller of Legal Metrology (Enforcement)</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="app-container">
+
+    <!-- Left Control Panel -->
+    <aside class="control-panel">
+
+      <!-- Upload Packaging Scan Card -->
+      <section class="card">
+        <h2 class="card-title">📷 Package Inspection Scan</h2>
+        
+        <div class="dropzone" id="dropzone">
+          <div class="dropzone-icon">📤</div>
+          <div class="dropzone-text" id="dropzoneText">Drag & Drop Packaging Photo</div>
+          <div class="dropzone-subtext">Front / Back PDP Scan (JPG, PNG)</div>
+          <input type="file" id="fileInput" accept="image/*" style="display: none;">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="categorySelect">Commodity Category / Rule Schedule</label>
+          <select id="categorySelect" class="form-select">
+            <option value="UNIVERSAL">Universal (General Commodities)</option>
+            <option value="FOOD_SNACKS">Food & Snack Products</option>
+            <option value="GARMENTS">Garments & Textiles (2022 Amendment)</option>
+            <option value="ECOMMERCE">E-Commerce Marketplaces (Rule 6(10))</option>
+            <option value="EDIBLE_OILS">Edible Oils & Vanaspati</option>
+            <option value="MEDICAL_DEVICES">Medical Devices & Instruments</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <button id="inspectBtn" class="btn-primary">
+            <span>⚡ Run Statutory Inspection</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Preset Case Catalog -->
+      <section class="card">
+        <h2 class="card-title">📂 Preloaded Case Catalog</h2>
+        <div class="sample-list" id="sampleList">
+          <!-- Dynamically populated via /api/samples -->
+          <div class="sample-item" data-id="sample_non_compliant">
+            <img src="/api/sample_img/sample_non_compliant_package.jpg" class="sample-thumb" alt="Sample 1">
+            <div class="sample-meta">
+              <h4>QuickSnacks Crunchy Bites</h4>
+              <p><span class="severity-pill critical">Violations</span> Illegal 'GMS', Missing Tax Clause & USP</p>
+            </div>
+          </div>
+
+          <div class="sample-item" data-id="sample_compliant">
+            <img src="/api/sample_img/sample_compliant_package.jpg" class="sample-thumb" alt="Sample 2">
+            <div class="sample-meta">
+              <h4>NutriBite Whole Wheat</h4>
+              <p><span class="severity-pill" style="background:#d1fae5; color:#047857;">100% Compliant</span> Standard 'g', MRP with taxes, USP</p>
+            </div>
+          </div>
+
+          <div class="sample-item" data-id="sample_garment">
+            <img src="/api/sample_img/sample_garment_package.jpg" class="sample-thumb" alt="Sample 3">
+            <div class="sample-meta">
+              <h4>Classic Cotton Shirt</h4>
+              <p><span class="severity-pill" style="background:#dbeafe; color:#1d4ed8;">Garments</span> 2022 Labelling Rules Conformance</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Legal Metrology Statutory References -->
+      <section class="card" style="font-size: 0.78rem; color: #475569;">
+        <h3 class="card-title" style="font-size: 0.82rem;">📜 Governing Statutes</h3>
+        <p>• <b>Section 15:</b> Power of Inspection, Search & Seizure.</p>
+        <p>• <b>Section 36(1):</b> Penalty for Non-Standard Packages (Fine up to ₹25,000 / ₹50,000 / Imprisonment).</p>
+        <p>• <b>Rule 6 & 7:</b> Mandatory PDP Declarations & Numeral Height Thresholds.</p>
+        <p>• <b>Rule 11 & Sched II:</b> Mandatory SI Units (g, kg, ml, l, m, N).</p>
+      </section>
+
+    </aside>
+
+    <!-- Right Workspace -->
+    <section class="main-workspace" style="position: relative;">
+
+      <!-- Loading Spinner Overlay -->
+      <div class="spinner-overlay" id="spinnerOverlay">
+        <div class="spinner"></div>
+        <div class="spinner-text" id="spinnerText">Processing Packaging Scan...</div>
+        <div class="spinner-subtext" id="spinnerSubtext">Detecting PDP • Calibrating Scale • Running Multilingual OCR • Cross-Examining Legal KB</div>
+      </div>
+
+      <!-- Compliance Scorecard Banner -->
+      <div class="scorecard-banner" id="scorecardBanner">
+        <div class="score-status-group">
+          <div class="status-pill" id="statusPill">AWAITING INSPECTION</div>
+          <div class="score-value-block">
+            <span class="score-number" id="scoreNumber">--</span>
+            <span class="score-total">/ 100</span>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-box">
+            <div class="stat-count" id="statChecked">0</div>
+            <div class="stat-label">Checks Done</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-count" id="statCompliant" style="color: #10b981;">0</div>
+            <div class="stat-label">Compliant</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-count" id="statViolations" style="color: #ef4444;">0</div>
+            <div class="stat-label">Violations</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Offender & Commodity Information Strip -->
+      <div class="info-strip" id="infoStrip">
+        <div class="info-item">
+          <h5>Manufacturer / Packer / Importer</h5>
+          <p id="infoManufacturer">Select or upload a packaging scan</p>
+        </div>
+        <div class="info-item">
+          <h5>Commodity Generic Name</h5>
+          <p id="infoCommodity">--</p>
+        </div>
+        <div class="info-item">
+          <h5>Declared Net Qty & MRP</h5>
+          <p id="infoQtyMrp">--</p>
+        </div>
+        <div class="info-item">
+          <h5>PDP Area & Numeral Font</h5>
+          <p id="infoPdpArea">--</p>
+        </div>
+      </div>
+
+      <!-- Side-by-Side Visual Comparison Viewer -->
+      <div class="side-by-side-grid">
+        <!-- Original Scan -->
+        <div class="image-viewer-card">
+          <div class="viewer-header">
+            <span class="viewer-title">Original Packaging Scan</span>
+            <span class="badge-tag original">Source Photo</span>
+          </div>
+          <div class="image-canvas-wrapper">
+            <div id="originalEmptyState" class="canvas-empty-state">
+              <span class="empty-icon">📷</span>
+              <b>No Packaging Scan Selected</b>
+              <span>Upload a photo or click a sample on the left.</span>
+            </div>
+            <img id="originalImg" src="" alt="Original Scan" style="display: none;">
+          </div>
+        </div>
+
+        <!-- Annotated Scan with Bounding Boxes -->
+        <div class="image-viewer-card">
+          <div class="viewer-header">
+            <span class="viewer-title">AI Statutory Annotation Overlay</span>
+            <span class="badge-tag annotated">Red = Defect • Green = Compliant</span>
+          </div>
+          <div class="image-canvas-wrapper">
+            <div id="annotatedEmptyState" class="canvas-empty-state">
+              <span class="empty-icon">⚖️</span>
+              <b>Awaiting Statutory Inspection</b>
+              <span>Click "Run Statutory Inspection" to analyze declarations & font compliance.</span>
+            </div>
+            <img id="annotatedImg" src="" alt="Annotated Scan" style="display: none;">
+          </div>
+        </div>
+      </div>
+
+      <!-- Violations Breakdown & Enforcement Directive Table -->
+      <div class="violations-container">
+        <div class="table-header-bar">
+          <h3 class="table-title">⚖️ Statutory Violations & Legal Action Directives</h3>
+          <div class="action-buttons">
+            <button id="exportJsonBtn" class="btn-outline">📥 Export JSON Report</button>
+            <button id="generateNoticeBtn" class="btn-notice">
+              <span>📄 Generate Official Legal Notice (PDF)</span>
+            </button>
+          </div>
+        </div>
+
+        <table class="violations-table" id="violationsTable">
+          <thead>
+            <tr>
+              <th style="width: 50px;">S.No</th>
+              <th style="width: 140px;">Declaration Field</th>
+              <th style="width: 150px;">Statutory Citation</th>
+              <th>Detected Defect vs. Statutory Mandate</th>
+              <th style="width: 90px;">Severity</th>
+            </tr>
+          </thead>
+          <tbody id="violationsTableBody">
+            <tr>
+              <td colspan="5" style="text-align: center; color: #64748b; padding: 2rem;">
+                No inspection results loaded yet. Click <b>"Run Statutory Inspection"</b> or select a preloaded sample on the left.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Legal Notice PDF Preview & Download Modal -->
+  <div class="modal-overlay" id="noticeModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>🏛️ Official Legal Notice & Seizure Memorandum Preview</h3>
+        <button class="close-btn" id="closeModalBtn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <iframe id="pdfFrame" class="pdf-preview-frame" src="about:blank"></iframe>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-outline" id="modalCloseAction">Close</button>
+        <a id="openNewTabLink" href="/api/download_latest_notice" target="_blank" class="btn-outline">
+          <span>↗ Open in New Tab</span>
+        </a>
+        <a id="downloadPdfLink" href="/api/download_latest_notice" class="btn-notice" target="_blank" download>
+          <span>⬇️ Download PDF Document</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/js/dashboard.js"></script>
+</body>
+</html>

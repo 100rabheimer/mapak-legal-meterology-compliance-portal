@@ -1,0 +1,3168 @@
+{
+  "metadata": {
+    "system": "Legal Metrology Compliance Rule Engine",
+    "version": "2026.1",
+    "authority": "Department of Consumer Affairs (DoCA)",
+    "rules_baseline": "Legal Metrology (Packaged Commodities) Rules, 2011 + Gazette Amendments"
+  },
+  "rules": {
+    "RULE_1": {
+      "rule_id": "RULE_1",
+      "clause": "Rule 1",
+      "title": "Short Title and Commencement",
+      "category": "MEDICAL DEVICES",
+      "is_universal": false,
+      "status": "AMENDED / UPDATED",
+      "effective_date": "2011-04-01",
+      "mandatory": false,
+      "text": "Legal Metrology (Packaged Commodities) Rules, 2011. Came into force on 1st April 2011.",
+      "source_pdf": "Sphygmomanomneters General Rules_1754973919.pdf",
+      "source_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Sphygmomanomneters%20General%20Rules_1754973919.pdf",
+      "amendment_history": [
+        {
+          "event": "ORIGIN (BASELINE 2011)",
+          "pdf_name": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+          "pdf_url": "file:///C:/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20(Package%20Commodities)%20Rules%2C%202011.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "07-Mar-2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2023.10.6 amendment in PCR_1732871982.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2023.10.6%20amendment%20in%20PCR_1732871982.pdf",
+          "notification_no": "G.S.R. 722(E)",
+          "date": "6th October, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2025.4.21 Gas Meter General Rules_1746001659.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2025.4.21%20Gas%20Meter%20General%20Rules_1746001659.pdf",
+          "notification_no": "G.S.R. 242(E)",
+          "date": "21st April, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2026.02.13 PCR 1st COO Filter on e-commerce websites_1771231030.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2026.02.13%20PCR%201st%20COO%20Filter%20on%20e-commerce%20websites_1771231030.pdf",
+          "notification_no": "G.S.R. 128(E)",
+          "date": "13th February, 2026"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2026.4.27 PCR 2nd COO from 1.7.2027_1777348487.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2026.4.27%20PCR%202nd%20COO%20from%201.7.2027_1777348487.pdf",
+          "notification_no": "G.S.R. 312(E)",
+          "date": "27th April, 2026"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2026.4.8 Jan Vishwas Act 2026_1777014384.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2026.4.8%20Jan%20Vishwas%20Act%202026_1777014384.pdf",
+          "notification_no": "Act No. 18 of 2023",
+          "date": "11th August, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "230946_1732871433.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/230946_1732871433.pdf",
+          "notification_no": "G.S.R. 779(E)",
+          "date": "2nd November, 2021"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "267107_1761404707.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/267107_1761404707.pdf",
+          "notification_no": "G.S.R. 765(E)",
+          "date": "23rd October, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2nd PCR Pan Masala_1764736734.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2nd%20PCR%20Pan%20Masala_1764736734.pdf",
+          "notification_no": "G.S.R. 881(E)",
+          "date": "2nd December, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "6(iii)_1732709674.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/6%28iii%29_1732709674.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "9th September, 2016"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "8(xii)_0_1732871346.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/8%28xii%29_0_1732871346.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040 (1).pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040%20%281%29.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Continuous_Electrical_Thermometer_1771307283.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Continuous_Electrical_Thermometer_1771307283.pdf",
+          "notification_no": "G.S.R. 122(E)",
+          "date": "11th February, 2026"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "GSR 175(E)_1777015860.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/GSR%20175%28E%29_1777015860.pdf",
+          "notification_no": "G.S.R. 175(E)",
+          "date": "12th March, 2026"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rule- Moisture Meters_1755669735.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rule-%20Moisture%20Meters_1755669735.pdf",
+          "notification_no": "G.S.R. 525(E)",
+          "date": "4th August, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rules 5th Amendment Thermometers_1756975842.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%205th%20Amendment%20Thermometers_1756975842.pdf",
+          "notification_no": "G.S.R. 536(E)",
+          "date": "7th August, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "28th November, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen_Rules_4th_Amendment_NAWI_Fees_1783336378.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen_Rules_4th_Amendment_NAWI_Fees_1783336378.pdf",
+          "notification_no": "G.S.R. 568(E)",
+          "date": "3rd  July, 2026"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "LM_General_Rule_Amendment_2026_1768192719.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/LM_General_Rule_Amendment_2026_1768192719.pdf",
+          "notification_no": "G.S.R. 10(E)",
+          "date": "7th January, 2026"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "PCR_3rd_29May2026_1780376045.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/PCR_3rd_29May2026_1780376045.pdf",
+          "notification_no": "G.S.R. 418(E)",
+          "date": "29th May, 2026"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Radar Equipment Gen Rules Amendment (1)_1746001628 (1).pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Radar%20Equipment%20Gen%20Rules%20Amendment%20%281%29_1746001628%20%281%29.pdf",
+          "notification_no": "G.S.R. 34(E)",
+          "date": "14th January, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Radar Equipment Gen Rules Amendment (1)_1746001628.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Radar%20Equipment%20Gen%20Rules%20Amendment%20%281%29_1746001628.pdf",
+          "notification_no": "G.S.R. 34(E)",
+          "date": "14th January, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Sphygmomanomneters General Rules_1754973919.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Sphygmomanomneters%20General%20Rules_1754973919.pdf",
+          "notification_no": "G.S.R. 498(E)",
+          "date": "28 July, 2025"
+        }
+      ]
+    },
+    "RULE_2": {
+      "rule_id": "RULE_2",
+      "clause": "Rule 2",
+      "title": "Definitions (PDP, Net Qty, Pre-packed Commodity)",
+      "category": "UNIVERSAL (ALL PACKAGED COMMODITIES)",
+      "is_universal": true,
+      "status": "AMENDED / UPDATED",
+      "effective_date": "2011-04-01",
+      "mandatory": false,
+      "text": "Definitions of Principal Display Panel (PDP), Net Quantity, Pre-packed Commodity, Wholesale Package, and Multi-piece Package.",
+      "source_pdf": "eGazette_30_nov_22_1732871630_1746006280.pdf",
+      "source_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/eGazette_30_nov_22_1732871630_1746006280.pdf",
+      "amendment_history": [
+        {
+          "event": "ORIGIN (BASELINE 2011)",
+          "pdf_name": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+          "pdf_url": "file:///C:/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20(Package%20Commodities)%20Rules%2C%202011.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "07-Mar-2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2022 3rd amendment in PCR Garments_1733228786.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2022%203rd%20amendment%20in%20PCR%20Garments_1733228786.pdf",
+          "notification_no": "G.S.R. 648(E)",
+          "date": "22nd August, 2022"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2023.01.27 amendment in amendment of 2023 PCR_1732871665.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2023.01.27%20amendment%20in%20amendment%20of%202023%20PCR_1732871665.pdf",
+          "notification_no": "G.S.R. 60(E)",
+          "date": "27th January, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2023.06.5 amendment in amendment of PCR ext till 30.6.2023_1732871791.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2023.06.5%20amendment%20in%20amendment%20of%20PCR%20ext%20till%2030.6.2023_1732871791.pdf",
+          "notification_no": "G.S.R. 412(E)",
+          "date": "5th June, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2023.10.6 amendment in PCR_1732871982.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2023.10.6%20amendment%20in%20PCR_1732871982.pdf",
+          "notification_no": "G.S.R. 722(E)",
+          "date": "6th October, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2023.6.23 QR Code PCR amendment_1732871827.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2023.6.23%20QR%20Code%20PCR%20amendment_1732871827.pdf",
+          "notification_no": "G.S.R. 456(E)",
+          "date": "23rd June, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2023.6.28 amendment in amendment of PCR ext till 31.8.2023_1733228263.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2023.6.28%20amendment%20in%20amendment%20of%20PCR%20ext%20till%2031.8.2023_1733228263.pdf",
+          "notification_no": "G.S.R. 463(E)",
+          "date": "28th June, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2025.12.18 Gen Rules 7th Amendment 2 yr verification period_1766504014.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2025.12.18%20Gen%20Rules%207th%20Amendment%202%20yr%20verification%20period_1766504014.pdf",
+          "notification_no": "G.S.R. 905(E)",
+          "date": "18th December, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2025.4.21 Gas Meter General Rules_1746001659.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2025.4.21%20Gas%20Meter%20General%20Rules_1746001659.pdf",
+          "notification_no": "G.S.R. 242(E)",
+          "date": "21st April, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2026.02.13 PCR 1st COO Filter on e-commerce websites_1771231030.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2026.02.13%20PCR%201st%20COO%20Filter%20on%20e-commerce%20websites_1771231030.pdf",
+          "notification_no": "G.S.R. 128(E)",
+          "date": "13th February, 2026"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2026.4.27 PCR 2nd COO from 1.7.2027_1777348487.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2026.4.27%20PCR%202nd%20COO%20from%201.7.2027_1777348487.pdf",
+          "notification_no": "G.S.R. 312(E)",
+          "date": "27th April, 2026"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2026.4.8 Jan Vishwas Act 2026_1777014384.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2026.4.8%20Jan%20Vishwas%20Act%202026_1777014384.pdf",
+          "notification_no": "Act No. 18 of 2023",
+          "date": "11th August, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "230946_1732871433.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/230946_1732871433.pdf",
+          "notification_no": "G.S.R. 779(E)",
+          "date": "2nd November, 2021"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "239353_1732709948.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/239353_1732709948.pdf",
+          "notification_no": "G.S.R. 763(E)",
+          "date": "4th October, 2022"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "248432_1732871904.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/248432_1732871904.pdf",
+          "notification_no": "G.S.R. 640(E)",
+          "date": "30th August, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "267107_1761404707.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/267107_1761404707.pdf",
+          "notification_no": "G.S.R. 765(E)",
+          "date": "23rd October, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2nd PCR Pan Masala_1764736734.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2nd%20PCR%20Pan%20Masala_1764736734.pdf",
+          "notification_no": "G.S.R. 881(E)",
+          "date": "2nd December, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "6(ii)_0_1732709637.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/6%28ii%29_0_1732709637.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "9th September, 2016"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "6(iii)_1732709674.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/6%28iii%29_1732709674.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "9th September, 2016"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "8(iii)_0_1732861046.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/8%28iii%29_0_1732861046.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "8(xi)_0_1732871315.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/8%28xi%29_0_1732871315.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "8(xii)_0_1732871346.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/8%28xii%29_0_1732871346.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040 (1).pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040%20%281%29.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Amendment of PCR ext till 31.12.2023 (1)_1732871950.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Amendment%20of%20PCR%20ext%20till%2031.12.2023%20%281%29_1732871950.pdf",
+          "notification_no": "G.S.R. 714(E)",
+          "date": "30th September, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Continuous_Electrical_Thermometer_1771307283.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Continuous_Electrical_Thermometer_1771307283.pdf",
+          "notification_no": "G.S.R. 122(E)",
+          "date": "11th February, 2026"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "GSR 175(E)_1777015860.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/GSR%20175%28E%29_1777015860.pdf",
+          "notification_no": "G.S.R. 175(E)",
+          "date": "12th March, 2026"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "GSR226_1732871458.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/GSR226_1732871458.pdf",
+          "notification_no": "G.S.R. 226(E)",
+          "date": "28th March, 2022"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rule- Moisture Meters_1755669735.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rule-%20Moisture%20Meters_1755669735.pdf",
+          "notification_no": "G.S.R. 525(E)",
+          "date": "4th August, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rules 5th Amendment Thermometers_1756975842.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%205th%20Amendment%20Thermometers_1756975842.pdf",
+          "notification_no": "G.S.R. 536(E)",
+          "date": "7th August, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "28th November, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen_Rules_4th_Amendment_NAWI_Fees_1783336378.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen_Rules_4th_Amendment_NAWI_Fees_1783336378.pdf",
+          "notification_no": "G.S.R. 568(E)",
+          "date": "3rd  July, 2026"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Jan Vishwas (Amendment of Provisions) Act, 2023 (18 of 2023)_1732708241.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Jan%20Vishwas%20%28Amendment%20of%20Provisions%29%20Act%2C%202023%20%2818%20of%202023%29_1732708241.pdf",
+          "notification_no": "Act No. 18 of 2023",
+          "date": "11th August, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "LM_General_Amendment_Rules2021_1732709906.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/LM_General_Amendment_Rules2021_1732709906.pdf",
+          "notification_no": "G.S.R. 149(E)",
+          "date": "3rd March, 2021"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "LM_General_Rule_Amendment_2026_1768192719.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/LM_General_Rule_Amendment_2026_1768192719.pdf",
+          "notification_no": "G.S.R. 10(E)",
+          "date": "7th January, 2026"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Notification -  Legal Metrology (QR Code)_1732871487.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Notification%20-%20%20Legal%20Metrology%20%28QR%20Code%29_1732871487.pdf",
+          "notification_no": "G.S.R. 577(E)",
+          "date": "14th July, 2022"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "PCR_1732871549.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/PCR_1732871549.pdf",
+          "notification_no": "G.S.R. 747(E)",
+          "date": "30th September, 2022"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "PCR_3rd_29May2026_1780376045.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/PCR_3rd_29May2026_1780376045.pdf",
+          "notification_no": "G.S.R. 418(E)",
+          "date": "29th May, 2026"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "PCR_Amendment_24March2023_1732871698.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/PCR_Amendment_24March2023_1732871698.pdf",
+          "notification_no": "G.S.R. 214(E)",
+          "date": "24th March, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Radar Equipment Gen Rules Amendment (1)_1746001628 (1).pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Radar%20Equipment%20Gen%20Rules%20Amendment%20%281%29_1746001628%20%281%29.pdf",
+          "notification_no": "G.S.R. 34(E)",
+          "date": "14th January, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Radar Equipment Gen Rules Amendment (1)_1746001628.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Radar%20Equipment%20Gen%20Rules%20Amendment%20%281%29_1746001628.pdf",
+          "notification_no": "G.S.R. 34(E)",
+          "date": "14th January, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Sphygmomanomneters General Rules_1754973919.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Sphygmomanomneters%20General%20Rules_1754973919.pdf",
+          "notification_no": "G.S.R. 498(E)",
+          "date": "28 July, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "eGazette_30_nov_22_1732871630_1746006280.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/eGazette_30_nov_22_1732871630_1746006280.pdf",
+          "notification_no": "G.S.R. 859(E)",
+          "date": "30th November, 2022"
+        }
+      ]
+    },
+    "RULE_4": {
+      "rule_id": "RULE_4",
+      "clause": "Rule 4",
+      "title": "Regulation of Packaging for Retail Sale",
+      "category": "MEDICAL DEVICES",
+      "is_universal": false,
+      "status": "AMENDED / UPDATED",
+      "effective_date": "2011-04-01",
+      "mandatory": true,
+      "text": "No person shall pre-pack or cause to be pre-packed any commodity for sale unless it bears mandatory declarations.",
+      "source_pdf": "Sphygmomanomneters General Rules_1754973919.pdf",
+      "source_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Sphygmomanomneters%20General%20Rules_1754973919.pdf",
+      "amendment_history": [
+        {
+          "event": "ORIGIN (BASELINE 2011)",
+          "pdf_name": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+          "pdf_url": "file:///C:/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20(Package%20Commodities)%20Rules%2C%202011.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "07-Mar-2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2023.10.6 amendment in PCR_1732871982.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2023.10.6%20amendment%20in%20PCR_1732871982.pdf",
+          "notification_no": "G.S.R. 722(E)",
+          "date": "6th October, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2025.4.21 Gas Meter General Rules_1746001659.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2025.4.21%20Gas%20Meter%20General%20Rules_1746001659.pdf",
+          "notification_no": "G.S.R. 242(E)",
+          "date": "21st April, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2026.4.8 Jan Vishwas Act 2026_1777014384.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2026.4.8%20Jan%20Vishwas%20Act%202026_1777014384.pdf",
+          "notification_no": "Act No. 18 of 2023",
+          "date": "11th August, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "230946_1732871433.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/230946_1732871433.pdf",
+          "notification_no": "G.S.R. 779(E)",
+          "date": "2nd November, 2021"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "267107_1761404707.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/267107_1761404707.pdf",
+          "notification_no": "G.S.R. 765(E)",
+          "date": "23rd October, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "6(iii)_1732709674.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/6%28iii%29_1732709674.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "9th September, 2016"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "8(xii)_0_1732871346.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/8%28xii%29_0_1732871346.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040 (1).pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040%20%281%29.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Continuous_Electrical_Thermometer_1771307283.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Continuous_Electrical_Thermometer_1771307283.pdf",
+          "notification_no": "G.S.R. 122(E)",
+          "date": "11th February, 2026"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "GSR226_1732871458.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/GSR226_1732871458.pdf",
+          "notification_no": "G.S.R. 226(E)",
+          "date": "28th March, 2022"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rule- Moisture Meters_1755669735.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rule-%20Moisture%20Meters_1755669735.pdf",
+          "notification_no": "G.S.R. 525(E)",
+          "date": "4th August, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "28th November, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Jan Vishwas (Amendment of Provisions) Act, 2023 (18 of 2023)_1732708241.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Jan%20Vishwas%20%28Amendment%20of%20Provisions%29%20Act%2C%202023%20%2818%20of%202023%29_1732708241.pdf",
+          "notification_no": "Act No. 18 of 2023",
+          "date": "11th August, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "LM_General_Amendment_Rules2021_1732709906.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/LM_General_Amendment_Rules2021_1732709906.pdf",
+          "notification_no": "G.S.R. 149(E)",
+          "date": "3rd March, 2021"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "LM_General_Rule_Amendment_2026_1768192719.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/LM_General_Rule_Amendment_2026_1768192719.pdf",
+          "notification_no": "G.S.R. 10(E)",
+          "date": "7th January, 2026"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Radar Equipment Gen Rules Amendment (1)_1746001628 (1).pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Radar%20Equipment%20Gen%20Rules%20Amendment%20%281%29_1746001628%20%281%29.pdf",
+          "notification_no": "G.S.R. 34(E)",
+          "date": "14th January, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Radar Equipment Gen Rules Amendment (1)_1746001628.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Radar%20Equipment%20Gen%20Rules%20Amendment%20%281%29_1746001628.pdf",
+          "notification_no": "G.S.R. 34(E)",
+          "date": "14th January, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Sphygmomanomneters General Rules_1754973919.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Sphygmomanomneters%20General%20Rules_1754973919.pdf",
+          "notification_no": "G.S.R. 498(E)",
+          "date": "28 July, 2025"
+        }
+      ]
+    },
+    "RULE_6_1_A": {
+      "rule_id": "RULE_6_1_A",
+      "clause": "Rule 6(1)(a)",
+      "title": "Manufacturer / Packer / Importer Details",
+      "category": "UNIVERSAL (ALL PACKAGED COMMODITIES)",
+      "is_universal": true,
+      "status": "ACTIVE",
+      "effective_date": "2011-04-01",
+      "mandatory": true,
+      "text": "Name and address of the manufacturer, packer, or importer must be clearly declared on package.",
+      "regex_patterns": [
+        "(?i)(Mfd\\.?\\s*by|Manufactured\\s*by|Packed\\s*by|Imported\\s*by|Marketed\\s*by)\\s*:?\\s*([A-Za-z0-9\\s\\,\\.\\-]+)"
+      ],
+      "source_pdf": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+      "source_url": "file:///C:/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20(Package%20Commodities)%20Rules%2C%202011.pdf",
+      "amendment_history": [
+        {
+          "event": "ORIGIN (BASELINE 2011)",
+          "pdf_name": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+          "pdf_url": "file:///C:/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20(Package%20Commodities)%20Rules%2C%202011.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "07-Mar-2011"
+        }
+      ]
+    },
+    "RULE_6_1_B": {
+      "rule_id": "RULE_6_1_B",
+      "clause": "Rule 6(1)(b)",
+      "title": "Generic or Common Name of Commodity",
+      "category": "UNIVERSAL (ALL PACKAGED COMMODITIES)",
+      "is_universal": true,
+      "status": "ACTIVE",
+      "effective_date": "2011-04-01",
+      "mandatory": true,
+      "text": "Common or generic names of the commodity contained in the package.",
+      "regex_patterns": [
+        "(?i)(Commodity|Product|Name)\\s*:?\\s*([A-Za-z\\s]+)"
+      ],
+      "source_pdf": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+      "source_url": "file:///C:/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20(Package%20Commodities)%20Rules%2C%202011.pdf",
+      "amendment_history": [
+        {
+          "event": "ORIGIN (BASELINE 2011)",
+          "pdf_name": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+          "pdf_url": "file:///C:/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20(Package%20Commodities)%20Rules%2C%202011.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "07-Mar-2011"
+        }
+      ]
+    },
+    "RULE_6_1_C": {
+      "rule_id": "RULE_6_1_C",
+      "clause": "Rule 6(1)(c)",
+      "title": "Net Quantity Declaration",
+      "category": "UNIVERSAL (ALL PACKAGED COMMODITIES)",
+      "is_universal": true,
+      "status": "ACTIVE",
+      "effective_date": "2011-04-01",
+      "mandatory": true,
+      "text": "Net quantity, in terms of standard unit of weight or measure or number.",
+      "regex_patterns": [
+        "(?i)(Net\\s*(Qty|Quantity|Weight|Wt|Vol|Volume))\\s*:?\\s*(\\d+(\\.\\d+)?)\\s*(g|kg|ml|l|L|N|m)"
+      ],
+      "source_pdf": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+      "source_url": "file:///C:/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20(Package%20Commodities)%20Rules%2C%202011.pdf",
+      "amendment_history": [
+        {
+          "event": "ORIGIN (BASELINE 2011)",
+          "pdf_name": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+          "pdf_url": "file:///C:/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20(Package%20Commodities)%20Rules%2C%202011.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "07-Mar-2011"
+        }
+      ]
+    },
+    "RULE_6_1_D": {
+      "rule_id": "RULE_6_1_D",
+      "clause": "Rule 6(1)(d)",
+      "title": "Month and Year of Manufacture / Packing",
+      "category": "UNIVERSAL (ALL PACKAGED COMMODITIES)",
+      "is_universal": true,
+      "status": "ACTIVE",
+      "effective_date": "2011-04-01",
+      "mandatory": true,
+      "text": "Month and year in which the commodity is manufactured or packed.",
+      "regex_patterns": [
+        "(?i)(Mfd|Packed|Mfg|Pkd)\\s*(Date|Month|&|\\/)?\\s*:?\\s*(\\d{2}[\\/\\-]\\d{2,4}|[A-Za-z]{3}\\s*\\d{4})"
+      ],
+      "source_pdf": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+      "source_url": "file:///C:/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20(Package%20Commodities)%20Rules%2C%202011.pdf",
+      "amendment_history": [
+        {
+          "event": "ORIGIN (BASELINE 2011)",
+          "pdf_name": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+          "pdf_url": "file:///C:/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20(Package%20Commodities)%20Rules%2C%202011.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "07-Mar-2011"
+        }
+      ]
+    },
+    "RULE_6_1_E": {
+      "rule_id": "RULE_6_1_E",
+      "clause": "Rule 6(1)(e)",
+      "title": "Maximum Retail Price (MRP)",
+      "category": "UNIVERSAL (ALL PACKAGED COMMODITIES)",
+      "is_universal": true,
+      "status": "ACTIVE",
+      "effective_date": "2011-04-01",
+      "mandatory": true,
+      "text": "Maximum Retail Price (MRP) inclusive of all taxes in Indian Rupees (\u20b9 or Rs.).",
+      "regex_patterns": [
+        "(?i)(MRP|Max\\.?\\s*Retail\\.?\\s*Price)\\s*:?\\s*(Rs\\.?|\u20b9)\\s*(\\d+(\\.\\d{2})?)\\s*\\(?\\s*inclusive of all taxes\\s*\\)?"
+      ],
+      "source_pdf": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+      "source_url": "file:///C:/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20(Package%20Commodities)%20Rules%2C%202011.pdf",
+      "amendment_history": [
+        {
+          "event": "ORIGIN (BASELINE 2011)",
+          "pdf_name": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+          "pdf_url": "file:///C:/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20(Package%20Commodities)%20Rules%2C%202011.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "07-Mar-2011"
+        }
+      ]
+    },
+    "RULE_6_1_EA": {
+      "rule_id": "RULE_6_1_EA",
+      "clause": "Rule 6(1)(ea)",
+      "title": "Unit Sale Price (USP) Declaration",
+      "category": "UNIVERSAL (ALL PACKAGED COMMODITIES)",
+      "is_universal": true,
+      "status": "ACTIVE (INSERTED 2021)",
+      "effective_date": "2022-04-01",
+      "mandatory": true,
+      "text": "Unit Sale Price declared as \u20b9 per g/kg/ml/l based on package net quantity size.",
+      "regex_patterns": [
+        "(?i)(Unit\\s*Sale\\s*Price|USP)\\s*:?\\s*(Rs\\.?|\u20b9)\\s*(\\d+(\\.\\d+)?)\\s*per\\s*(g|kg|ml|l|L|N)"
+      ],
+      "source_pdf": "LM_General_Amendment_Rules2021_1732709906.pdf",
+      "source_url": "file:///C:/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/LM_General_Amendment_Rules2021_1732709906.pdf",
+      "amendment_history": [
+        {
+          "event": "INSERTED (AMENDMENT 2021)",
+          "pdf_name": "LM_General_Amendment_Rules2021_1732709906.pdf",
+          "pdf_url": "file:///C:/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/LM_General_Amendment_Rules2021_1732709906.pdf",
+          "notification_no": "G.S.R. 779(E)",
+          "date": "02-Nov-2021"
+        }
+      ]
+    },
+    "RULE_6_1_F": {
+      "rule_id": "RULE_6_1_F",
+      "clause": "Rule 6(1)(f)",
+      "title": "Consumer Care Contact Details",
+      "category": "UNIVERSAL (ALL PACKAGED COMMODITIES)",
+      "is_universal": true,
+      "status": "ACTIVE",
+      "effective_date": "2011-04-01",
+      "mandatory": true,
+      "text": "Name, address, telephone number, and e-mail address for consumer complaints.",
+      "regex_patterns": [
+        "(?i)(Customer|Consumer)\\s*(Care|Cell|Helpline)\\s*:?\\s*([A-Za-z0-9\\s\\,\\.\\@\\-\\+]+)"
+      ],
+      "source_pdf": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+      "source_url": "file:///C:/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20(Package%20Commodities)%20Rules%2C%202011.pdf",
+      "amendment_history": [
+        {
+          "event": "ORIGIN (BASELINE 2011)",
+          "pdf_name": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+          "pdf_url": "file:///C:/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20(Package%20Commodities)%20Rules%2C%202011.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "07-Mar-2011"
+        }
+      ]
+    },
+    "RULE_6_1_G": {
+      "rule_id": "RULE_6_1_G",
+      "clause": "Rule 6(1)(g)",
+      "title": "Country of Origin Declaration",
+      "category": "UNIVERSAL (ALL PACKAGED COMMODITIES)",
+      "is_universal": true,
+      "status": "ACTIVE (INSERTED 2021)",
+      "effective_date": "2022-04-01",
+      "mandatory": true,
+      "text": "Country of Origin of commodity explicitly declared for all imported packages.",
+      "regex_patterns": [
+        "(?i)(Country\\s*of\\s*Origin|Made\\s*in|Imported\\s*from)\\s*:?\\s*([A-Za-z\\s]+)"
+      ],
+      "source_pdf": "2026.02.13 PCR 1st COO Filter on e-commerce websites_1771231030.pdf",
+      "source_url": "file:///C:/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2026.02.13%20PCR%201st%20COO%20Filter%20on%20e-commerce%20websites_1771231030.pdf",
+      "amendment_history": [
+        {
+          "event": "INSERTED (AMENDMENT 2021)",
+          "pdf_name": "2026.02.13 PCR 1st COO Filter on e-commerce websites_1771231030.pdf",
+          "pdf_url": "file:///C:/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2026.02.13%20PCR%201st%20COO%20Filter%20on%20e-commerce%20websites_1771231030.pdf",
+          "notification_no": "G.S.R. 779(E)",
+          "date": "02-Nov-2021"
+        }
+      ]
+    },
+    "RULE_7_FONT": {
+      "rule_id": "RULE_7_FONT",
+      "clause": "Rule 7",
+      "title": "Minimum Font Height Requirements",
+      "category": "UNIVERSAL (ALL PACKAGED COMMODITIES)",
+      "is_universal": true,
+      "status": "ACTIVE",
+      "effective_date": "2011-04-01",
+      "mandatory": true,
+      "text": "Minimum height of numerals and letters based on Principal Display Panel area.",
+      "thresholds": [
+        {
+          "pdp_area_sq_cm": "<= 50",
+          "min_normal_mm": 1.0,
+          "min_net_qty_mrp_mm": 1.5
+        },
+        {
+          "pdp_area_sq_cm": "50 < area <= 100",
+          "min_normal_mm": 1.5,
+          "min_net_qty_mrp_mm": 2.0
+        },
+        {
+          "pdp_area_sq_cm": "100 < area <= 500",
+          "min_normal_mm": 2.5,
+          "min_net_qty_mrp_mm": 4.0
+        },
+        {
+          "pdp_area_sq_cm": "> 500",
+          "min_normal_mm": 4.0,
+          "min_net_qty_mrp_mm": 6.0
+        }
+      ],
+      "source_pdf": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+      "source_url": "file:///C:/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20(Package%20Commodities)%20Rules%2C%202011.pdf",
+      "amendment_history": [
+        {
+          "event": "ORIGIN (BASELINE 2011)",
+          "pdf_name": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+          "pdf_url": "file:///C:/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20(Package%20Commodities)%20Rules%2C%202011.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "07-Mar-2011"
+        }
+      ]
+    },
+    "RULE_11_UNITS": {
+      "rule_id": "RULE_11_UNITS",
+      "clause": "Rule 11",
+      "title": "Standard Units & Prohibited Symbols",
+      "category": "UNIVERSAL (ALL PACKAGED COMMODITIES)",
+      "is_universal": true,
+      "status": "ACTIVE",
+      "effective_date": "2011-04-01",
+      "mandatory": true,
+      "text": "Units of weight, measure or number shall be expressed in standard symbols: 'g', 'kg', 'ml', 'l', 'm', 'N'. Non-standard symbols such as 'gms', 'gm', 'ML', 'KG.' are prohibited.",
+      "allowed_symbols": [
+        "g",
+        "kg",
+        "ml",
+        "l",
+        "L",
+        "m",
+        "N"
+      ],
+      "prohibited_symbols": [
+        "gms",
+        "gm",
+        "ML",
+        "KG.",
+        "grms",
+        "Ltr",
+        "Ltrs"
+      ],
+      "source_pdf": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+      "source_url": "file:///C:/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20(Package%20Commodities)%20Rules%2C%202011.pdf",
+      "amendment_history": [
+        {
+          "event": "ORIGIN (BASELINE 2011)",
+          "pdf_name": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+          "pdf_url": "file:///C:/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20(Package%20Commodities)%20Rules%2C%202011.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "07-Mar-2011"
+        }
+      ]
+    },
+    "RULE_3": {
+      "rule_id": "RULE_3",
+      "clause": "Rule 3",
+      "title": "In the said rules, in rule 6, in sub -rule , in clause  after the third proviso, the following shall",
+      "category": "MEDICAL DEVICES",
+      "is_universal": false,
+      "status": "AMENDED / UPDATED",
+      "effective_date": "6th October, 2023",
+      "mandatory": true,
+      "text": "3.  In the said rules, in rule 6, in sub -rule (1), in clause (d) after the third proviso, the following shall be inserted  with effect from the 1st day of April, 2024, namely:-   \u201cProvided also that nothing contained in this clause shall apply to spare parts and accessories used for the  purpose of servicing with a warranty and not sold to end cus...",
+      "source_pdf": "Sphygmomanomneters General Rules_1754973919.pdf",
+      "source_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Sphygmomanomneters%20General%20Rules_1754973919.pdf",
+      "amendment_history": [
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2023.10.6 amendment in PCR_1732871982.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2023.10.6%20amendment%20in%20PCR_1732871982.pdf",
+          "notification_no": "G.S.R. 722(E)",
+          "date": "6th October, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2025.4.21 Gas Meter General Rules_1746001659.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2025.4.21%20Gas%20Meter%20General%20Rules_1746001659.pdf",
+          "notification_no": "G.S.R. 242(E)",
+          "date": "21st April, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2026.4.8 Jan Vishwas Act 2026_1777014384.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2026.4.8%20Jan%20Vishwas%20Act%202026_1777014384.pdf",
+          "notification_no": "Act No. 18 of 2023",
+          "date": "11th August, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "230946_1732871433.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/230946_1732871433.pdf",
+          "notification_no": "G.S.R. 779(E)",
+          "date": "2nd November, 2021"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "239353_1732709948.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/239353_1732709948.pdf",
+          "notification_no": "G.S.R. 763(E)",
+          "date": "4th October, 2022"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "267107_1761404707.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/267107_1761404707.pdf",
+          "notification_no": "G.S.R. 765(E)",
+          "date": "23rd October, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "6(iii)_1732709674.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/6%28iii%29_1732709674.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "9th September, 2016"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "8(xii)_0_1732871346.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/8%28xii%29_0_1732871346.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20%28Package%20Commodities%29%20Rules%2C%202011.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040 (1).pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040%20%281%29.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Continuous_Electrical_Thermometer_1771307283.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Continuous_Electrical_Thermometer_1771307283.pdf",
+          "notification_no": "G.S.R. 122(E)",
+          "date": "11th February, 2026"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "GSR226_1732871458.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/GSR226_1732871458.pdf",
+          "notification_no": "G.S.R. 226(E)",
+          "date": "28th March, 2022"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rule- Moisture Meters_1755669735.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rule-%20Moisture%20Meters_1755669735.pdf",
+          "notification_no": "G.S.R. 525(E)",
+          "date": "4th August, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "28th November, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Jan Vishwas (Amendment of Provisions) Act, 2023 (18 of 2023)_1732708241.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Jan%20Vishwas%20%28Amendment%20of%20Provisions%29%20Act%2C%202023%20%2818%20of%202023%29_1732708241.pdf",
+          "notification_no": "Act No. 18 of 2023",
+          "date": "11th August, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "LM_General_Amendment_Rules2021_1732709906.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/LM_General_Amendment_Rules2021_1732709906.pdf",
+          "notification_no": "G.S.R. 149(E)",
+          "date": "3rd March, 2021"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "LM_General_Rule_Amendment_2026_1768192719.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/LM_General_Rule_Amendment_2026_1768192719.pdf",
+          "notification_no": "G.S.R. 10(E)",
+          "date": "7th January, 2026"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Radar Equipment Gen Rules Amendment (1)_1746001628 (1).pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Radar%20Equipment%20Gen%20Rules%20Amendment%20%281%29_1746001628%20%281%29.pdf",
+          "notification_no": "G.S.R. 34(E)",
+          "date": "14th January, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Radar Equipment Gen Rules Amendment (1)_1746001628.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Radar%20Equipment%20Gen%20Rules%20Amendment%20%281%29_1746001628.pdf",
+          "notification_no": "G.S.R. 34(E)",
+          "date": "14th January, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Sphygmomanomneters General Rules_1754973919.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Sphygmomanomneters%20General%20Rules_1754973919.pdf",
+          "notification_no": "G.S.R. 498(E)",
+          "date": "28 July, 2025"
+        }
+      ]
+    },
+    "RULE_5": {
+      "rule_id": "RULE_5",
+      "clause": "Rule 5",
+      "title": "In the said rules, in rule 26 , in clause , in the first proviso, for item , the following item shal",
+      "category": "MEDICAL DEVICES",
+      "is_universal": false,
+      "status": "AMENDED / UPDATED",
+      "effective_date": "6th October, 2023",
+      "mandatory": true,
+      "text": "5.  In the said rules, in rule 26 , in clause (f), in the first proviso, for item (iii), the following item shall be  substituted, namely:-  \u201c(iii) size of the product in metric notation in terms of cm or m, as the case may be, or with internationally  recognizable size indicators such as S, M, L, XL, XXL and XXXL along with details in metric notat...",
+      "source_pdf": "Sphygmomanomneters General Rules_1754973919.pdf",
+      "source_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Sphygmomanomneters%20General%20Rules_1754973919.pdf",
+      "amendment_history": [
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2023.10.6 amendment in PCR_1732871982.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2023.10.6%20amendment%20in%20PCR_1732871982.pdf",
+          "notification_no": "G.S.R. 722(E)",
+          "date": "6th October, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2025.4.21 Gas Meter General Rules_1746001659.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2025.4.21%20Gas%20Meter%20General%20Rules_1746001659.pdf",
+          "notification_no": "G.S.R. 242(E)",
+          "date": "21st April, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2026.4.8 Jan Vishwas Act 2026_1777014384.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2026.4.8%20Jan%20Vishwas%20Act%202026_1777014384.pdf",
+          "notification_no": "Act No. 18 of 2023",
+          "date": "11th August, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "230946_1732871433.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/230946_1732871433.pdf",
+          "notification_no": "G.S.R. 779(E)",
+          "date": "2nd November, 2021"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "6(iii)_1732709674.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/6%28iii%29_1732709674.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "9th September, 2016"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "8(xii)_0_1732871346.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/8%28xii%29_0_1732871346.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20%28Package%20Commodities%29%20Rules%2C%202011.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040 (1).pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040%20%281%29.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Continuous_Electrical_Thermometer_1771307283.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Continuous_Electrical_Thermometer_1771307283.pdf",
+          "notification_no": "G.S.R. 122(E)",
+          "date": "11th February, 2026"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "GSR226_1732871458.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/GSR226_1732871458.pdf",
+          "notification_no": "G.S.R. 226(E)",
+          "date": "28th March, 2022"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rule- Moisture Meters_1755669735.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rule-%20Moisture%20Meters_1755669735.pdf",
+          "notification_no": "G.S.R. 525(E)",
+          "date": "4th August, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "28th November, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "LM_General_Rule_Amendment_2026_1768192719.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/LM_General_Rule_Amendment_2026_1768192719.pdf",
+          "notification_no": "G.S.R. 10(E)",
+          "date": "7th January, 2026"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Radar Equipment Gen Rules Amendment (1)_1746001628 (1).pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Radar%20Equipment%20Gen%20Rules%20Amendment%20%281%29_1746001628%20%281%29.pdf",
+          "notification_no": "G.S.R. 34(E)",
+          "date": "14th January, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Radar Equipment Gen Rules Amendment (1)_1746001628.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Radar%20Equipment%20Gen%20Rules%20Amendment%20%281%29_1746001628.pdf",
+          "notification_no": "G.S.R. 34(E)",
+          "date": "14th January, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Sphygmomanomneters General Rules_1754973919.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Sphygmomanomneters%20General%20Rules_1754973919.pdf",
+          "notification_no": "G.S.R. 498(E)",
+          "date": "28 July, 2025"
+        }
+      ]
+    },
+    "RULE_6": {
+      "rule_id": "RULE_6",
+      "clause": "Rule 6",
+      "title": "In the said rules, in rule 26, after clause , the following clause shall be inserted, namely: -",
+      "category": "MEASURING INSTRUMENTS & METERS",
+      "is_universal": false,
+      "status": "AMENDED / UPDATED",
+      "effective_date": "6th October, 2023",
+      "mandatory": true,
+      "text": "6.  In the said rules, in rule 26, after clause (f), the following clause shall be inserted, namely: -  \u201c(g) it contains loose commodities ordered thr ough e -commerce channels, where consumers are aware of the  ordered commodity, its type and quantity:  Provided that such commodities shall bear the following information, namely: -  (i)      name a...",
+      "source_pdf": "Sphygmomanomneters General Rules_1754973919.pdf",
+      "source_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Sphygmomanomneters%20General%20Rules_1754973919.pdf",
+      "amendment_history": [
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2023.10.6 amendment in PCR_1732871982.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2023.10.6%20amendment%20in%20PCR_1732871982.pdf",
+          "notification_no": "G.S.R. 722(E)",
+          "date": "6th October, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2025.4.21 Gas Meter General Rules_1746001659.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2025.4.21%20Gas%20Meter%20General%20Rules_1746001659.pdf",
+          "notification_no": "G.S.R. 242(E)",
+          "date": "21st April, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2026.4.8 Jan Vishwas Act 2026_1777014384.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2026.4.8%20Jan%20Vishwas%20Act%202026_1777014384.pdf",
+          "notification_no": "Act No. 18 of 2023",
+          "date": "11th August, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "230946_1732871433.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/230946_1732871433.pdf",
+          "notification_no": "G.S.R. 779(E)",
+          "date": "2nd November, 2021"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "6(ii)_0_1732709637.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/6%28ii%29_0_1732709637.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "9th September, 2016"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "6(iii)_1732709674.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/6%28iii%29_1732709674.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "9th September, 2016"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "8(xii)_0_1732871346.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/8%28xii%29_0_1732871346.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20%28Package%20Commodities%29%20Rules%2C%202011.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040 (1).pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040%20%281%29.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Continuous_Electrical_Thermometer_1771307283.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Continuous_Electrical_Thermometer_1771307283.pdf",
+          "notification_no": "G.S.R. 122(E)",
+          "date": "11th February, 2026"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "GSR226_1732871458.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/GSR226_1732871458.pdf",
+          "notification_no": "G.S.R. 226(E)",
+          "date": "28th March, 2022"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "28th November, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "LM_General_Rule_Amendment_2026_1768192719.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/LM_General_Rule_Amendment_2026_1768192719.pdf",
+          "notification_no": "G.S.R. 10(E)",
+          "date": "7th January, 2026"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Radar Equipment Gen Rules Amendment (1)_1746001628 (1).pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Radar%20Equipment%20Gen%20Rules%20Amendment%20%281%29_1746001628%20%281%29.pdf",
+          "notification_no": "G.S.R. 34(E)",
+          "date": "14th January, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Radar Equipment Gen Rules Amendment (1)_1746001628.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Radar%20Equipment%20Gen%20Rules%20Amendment%20%281%29_1746001628.pdf",
+          "notification_no": "G.S.R. 34(E)",
+          "date": "14th January, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Sphygmomanomneters General Rules_1754973919.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Sphygmomanomneters%20General%20Rules_1754973919.pdf",
+          "notification_no": "G.S.R. 498(E)",
+          "date": "28 July, 2025"
+        }
+      ]
+    },
+    "RULE_7": {
+      "rule_id": "RULE_7",
+      "clause": "Rule 7",
+      "title": "In the said rules, in the FOURTH SCHEDULE, against serial number , for the entry in column 3, the",
+      "category": "MEDICAL DEVICES",
+      "is_universal": false,
+      "status": "AMENDED / UPDATED",
+      "effective_date": "6th October, 2023",
+      "mandatory": true,
+      "text": "7.  In the said rules, in the FOURTH SCHEDULE, against serial number (11), for the entry in column 3, the  entry \u201cweight or volume and if the net quantity is declared by volume, the net quantity shall also be declared by  weight\u201d shall be substituted.   [F. No. I-10/22/2021-W&M]  NIDHI KHARE, Special Secy.     Note: The principal rules were publish...",
+      "source_pdf": "Sphygmomanomneters General Rules_1754973919.pdf",
+      "source_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Sphygmomanomneters%20General%20Rules_1754973919.pdf",
+      "amendment_history": [
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2023.10.6 amendment in PCR_1732871982.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2023.10.6%20amendment%20in%20PCR_1732871982.pdf",
+          "notification_no": "G.S.R. 722(E)",
+          "date": "6th October, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2025.4.21 Gas Meter General Rules_1746001659.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2025.4.21%20Gas%20Meter%20General%20Rules_1746001659.pdf",
+          "notification_no": "G.S.R. 242(E)",
+          "date": "21st April, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2026.4.8 Jan Vishwas Act 2026_1777014384.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2026.4.8%20Jan%20Vishwas%20Act%202026_1777014384.pdf",
+          "notification_no": "Act No. 18 of 2023",
+          "date": "11th August, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "230946_1732871433.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/230946_1732871433.pdf",
+          "notification_no": "G.S.R. 779(E)",
+          "date": "2nd November, 2021"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "6(ii)_0_1732709637.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/6%28ii%29_0_1732709637.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "9th September, 2016"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "6(iii)_1732709674.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/6%28iii%29_1732709674.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "9th September, 2016"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "8(xii)_0_1732871346.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/8%28xii%29_0_1732871346.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20%28Package%20Commodities%29%20Rules%2C%202011.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040 (1).pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040%20%281%29.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Continuous_Electrical_Thermometer_1771307283.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Continuous_Electrical_Thermometer_1771307283.pdf",
+          "notification_no": "G.S.R. 122(E)",
+          "date": "11th February, 2026"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "28th November, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "LM_General_Rule_Amendment_2026_1768192719.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/LM_General_Rule_Amendment_2026_1768192719.pdf",
+          "notification_no": "G.S.R. 10(E)",
+          "date": "7th January, 2026"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Radar Equipment Gen Rules Amendment (1)_1746001628 (1).pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Radar%20Equipment%20Gen%20Rules%20Amendment%20%281%29_1746001628%20%281%29.pdf",
+          "notification_no": "G.S.R. 34(E)",
+          "date": "14th January, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Radar Equipment Gen Rules Amendment (1)_1746001628.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Radar%20Equipment%20Gen%20Rules%20Amendment%20%281%29_1746001628.pdf",
+          "notification_no": "G.S.R. 34(E)",
+          "date": "14th January, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Sphygmomanomneters General Rules_1754973919.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Sphygmomanomneters%20General%20Rules_1754973919.pdf",
+          "notification_no": "G.S.R. 498(E)",
+          "date": "28 July, 2025"
+        }
+      ]
+    },
+    "RULE_8": {
+      "rule_id": "RULE_8",
+      "clause": "Rule 8",
+      "title": "Cone- shaped All types 6 years 4 years",
+      "category": "MEDICAL DEVICES",
+      "is_universal": false,
+      "status": "AMENDED / UPDATED",
+      "effective_date": "21st April, 2025",
+      "mandatory": true,
+      "text": "8. Cone- shaped All types 6 years 4 years  [\u092d\u093e\u0917 II\u2014\u0916\u0923\u094d \u0921 3(i)] \u092d\u093e\u0930\u0924 \u0915\u093e \u0930\u093e\u093f\u092a\u0924\u094d\u0930 : \u0905\u0938\u093e\u0927\u093e\u0930\u0923  73    differential pressure    (b) for Mass -flow Meters, -  Table 2.  Serial No. Type Sub-type  Initial re-verification period Subsequent re- verification period  (1) (2) (3) (4) (5)...",
+      "source_pdf": "Sphygmomanomneters General Rules_1754973919.pdf",
+      "source_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Sphygmomanomneters%20General%20Rules_1754973919.pdf",
+      "amendment_history": [
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2025.4.21 Gas Meter General Rules_1746001659.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2025.4.21%20Gas%20Meter%20General%20Rules_1746001659.pdf",
+          "notification_no": "G.S.R. 242(E)",
+          "date": "21st April, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2026.4.8 Jan Vishwas Act 2026_1777014384.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2026.4.8%20Jan%20Vishwas%20Act%202026_1777014384.pdf",
+          "notification_no": "Act No. 18 of 2023",
+          "date": "11th August, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "6(iii)_1732709674.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/6%28iii%29_1732709674.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "9th September, 2016"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "8(xii)_0_1732871346.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/8%28xii%29_0_1732871346.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20%28Package%20Commodities%29%20Rules%2C%202011.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040 (1).pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040%20%281%29.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Continuous_Electrical_Thermometer_1771307283.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Continuous_Electrical_Thermometer_1771307283.pdf",
+          "notification_no": "G.S.R. 122(E)",
+          "date": "11th February, 2026"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "28th November, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "LM_General_Rule_Amendment_2026_1768192719.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/LM_General_Rule_Amendment_2026_1768192719.pdf",
+          "notification_no": "G.S.R. 10(E)",
+          "date": "7th January, 2026"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Sphygmomanomneters General Rules_1754973919.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Sphygmomanomneters%20General%20Rules_1754973919.pdf",
+          "notification_no": "G.S.R. 498(E)",
+          "date": "28 July, 2025"
+        }
+      ]
+    },
+    "RULE_9": {
+      "rule_id": "RULE_9",
+      "clause": "Rule 9",
+      "title": "Coriolis",
+      "category": "MEDICAL DEVICES",
+      "is_universal": false,
+      "status": "AMENDED / UPDATED",
+      "effective_date": "21st April, 2025",
+      "mandatory": true,
+      "text": "9.   Coriolis  NGV Dispenser  System 1 year 1 year    All Other types 6 years 4 years...",
+      "source_pdf": "Sphygmomanomneters General Rules_1754973919.pdf",
+      "source_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Sphygmomanomneters%20General%20Rules_1754973919.pdf",
+      "amendment_history": [
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2025.4.21 Gas Meter General Rules_1746001659.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2025.4.21%20Gas%20Meter%20General%20Rules_1746001659.pdf",
+          "notification_no": "G.S.R. 242(E)",
+          "date": "21st April, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2026.4.8 Jan Vishwas Act 2026_1777014384.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2026.4.8%20Jan%20Vishwas%20Act%202026_1777014384.pdf",
+          "notification_no": "Act No. 18 of 2023",
+          "date": "11th August, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "6(iii)_1732709674.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/6%28iii%29_1732709674.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "9th September, 2016"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "8(xii)_0_1732871346.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/8%28xii%29_0_1732871346.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20%28Package%20Commodities%29%20Rules%2C%202011.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040 (1).pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040%20%281%29.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Continuous_Electrical_Thermometer_1771307283.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Continuous_Electrical_Thermometer_1771307283.pdf",
+          "notification_no": "G.S.R. 122(E)",
+          "date": "11th February, 2026"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "28th November, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "LM_General_Rule_Amendment_2026_1768192719.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/LM_General_Rule_Amendment_2026_1768192719.pdf",
+          "notification_no": "G.S.R. 10(E)",
+          "date": "7th January, 2026"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Sphygmomanomneters General Rules_1754973919.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Sphygmomanomneters%20General%20Rules_1754973919.pdf",
+          "notification_no": "G.S.R. 498(E)",
+          "date": "28 July, 2025"
+        }
+      ]
+    },
+    "RULE_10": {
+      "rule_id": "RULE_10",
+      "clause": "Rule 10",
+      "title": "Thermal All types 6 years 4 years",
+      "category": "MEDICAL DEVICES",
+      "is_universal": false,
+      "status": "AMENDED / UPDATED",
+      "effective_date": "21st April, 2025",
+      "mandatory": true,
+      "text": "10. Thermal All types 6 years 4 years    (c) for Base Pressure and temperature conversion devices or Recording devices, -    Table 3.  Serial No. Type Sub-type  Initial re-verification period Subsequent re- verification period  (1) (2) (3) (4) (5)...",
+      "source_pdf": "Sphygmomanomneters General Rules_1754973919.pdf",
+      "source_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Sphygmomanomneters%20General%20Rules_1754973919.pdf",
+      "amendment_history": [
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2025.4.21 Gas Meter General Rules_1746001659.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2025.4.21%20Gas%20Meter%20General%20Rules_1746001659.pdf",
+          "notification_no": "G.S.R. 242(E)",
+          "date": "21st April, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2026.4.8 Jan Vishwas Act 2026_1777014384.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2026.4.8%20Jan%20Vishwas%20Act%202026_1777014384.pdf",
+          "notification_no": "Act No. 18 of 2023",
+          "date": "11th August, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "8(xii)_0_1732871346.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/8%28xii%29_0_1732871346.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20%28Package%20Commodities%29%20Rules%2C%202011.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040 (1).pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040%20%281%29.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Continuous_Electrical_Thermometer_1771307283.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Continuous_Electrical_Thermometer_1771307283.pdf",
+          "notification_no": "G.S.R. 122(E)",
+          "date": "11th February, 2026"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "28th November, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "LM_General_Rule_Amendment_2026_1768192719.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/LM_General_Rule_Amendment_2026_1768192719.pdf",
+          "notification_no": "G.S.R. 10(E)",
+          "date": "7th January, 2026"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Sphygmomanomneters General Rules_1754973919.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Sphygmomanomneters%20General%20Rules_1754973919.pdf",
+          "notification_no": "G.S.R. 498(E)",
+          "date": "28 July, 2025"
+        }
+      ]
+    },
+    "RULE_11": {
+      "rule_id": "RULE_11",
+      "clause": "Rule 11",
+      "title": "Chart Recorder All types same as the host meter same as the host meter",
+      "category": "MEDICAL DEVICES",
+      "is_universal": false,
+      "status": "AMENDED / UPDATED",
+      "effective_date": "21st April, 2025",
+      "mandatory": true,
+      "text": "11.  Chart Recorder All types same as the host meter same as the host meter...",
+      "source_pdf": "Sphygmomanomneters General Rules_1754973919.pdf",
+      "source_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Sphygmomanomneters%20General%20Rules_1754973919.pdf",
+      "amendment_history": [
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2025.4.21 Gas Meter General Rules_1746001659.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2025.4.21%20Gas%20Meter%20General%20Rules_1746001659.pdf",
+          "notification_no": "G.S.R. 242(E)",
+          "date": "21st April, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2026.4.8 Jan Vishwas Act 2026_1777014384.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2026.4.8%20Jan%20Vishwas%20Act%202026_1777014384.pdf",
+          "notification_no": "Act No. 18 of 2023",
+          "date": "11th August, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "8(xii)_0_1732871346.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/8%28xii%29_0_1732871346.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20%28Package%20Commodities%29%20Rules%2C%202011.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040 (1).pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040%20%281%29.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "28th November, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "LM_General_Rule_Amendment_2026_1768192719.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/LM_General_Rule_Amendment_2026_1768192719.pdf",
+          "notification_no": "G.S.R. 10(E)",
+          "date": "7th January, 2026"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Sphygmomanomneters General Rules_1754973919.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Sphygmomanomneters%20General%20Rules_1754973919.pdf",
+          "notification_no": "G.S.R. 498(E)",
+          "date": "28 July, 2025"
+        }
+      ]
+    },
+    "RULE_12": {
+      "rule_id": "RULE_12",
+      "clause": "Rule 12",
+      "title": "Mechanical- type",
+      "category": "MEDICAL DEVICES",
+      "is_universal": false,
+      "status": "AMENDED / UPDATED",
+      "effective_date": "21st April, 2025",
+      "mandatory": true,
+      "text": "12. Mechanical- type  Volume Conversion  Device  Rotary meter  modules  7 years 5 years  All other types...",
+      "source_pdf": "Sphygmomanomneters General Rules_1754973919.pdf",
+      "source_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Sphygmomanomneters%20General%20Rules_1754973919.pdf",
+      "amendment_history": [
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2025.4.21 Gas Meter General Rules_1746001659.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2025.4.21%20Gas%20Meter%20General%20Rules_1746001659.pdf",
+          "notification_no": "G.S.R. 242(E)",
+          "date": "21st April, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2026.4.8 Jan Vishwas Act 2026_1777014384.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2026.4.8%20Jan%20Vishwas%20Act%202026_1777014384.pdf",
+          "notification_no": "Act No. 18 of 2023",
+          "date": "11th August, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "6(iii)_1732709674.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/6%28iii%29_1732709674.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "9th September, 2016"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "8(xii)_0_1732871346.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/8%28xii%29_0_1732871346.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20%28Package%20Commodities%29%20Rules%2C%202011.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040 (1).pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040%20%281%29.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "28th November, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "LM_General_Rule_Amendment_2026_1768192719.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/LM_General_Rule_Amendment_2026_1768192719.pdf",
+          "notification_no": "G.S.R. 10(E)",
+          "date": "7th January, 2026"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Sphygmomanomneters General Rules_1754973919.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Sphygmomanomneters%20General%20Rules_1754973919.pdf",
+          "notification_no": "G.S.R. 498(E)",
+          "date": "28 July, 2025"
+        }
+      ]
+    },
+    "RULE_13": {
+      "rule_id": "RULE_13",
+      "clause": "Rule 13",
+      "title": "Electronic- type",
+      "category": "MEDICAL DEVICES",
+      "is_universal": false,
+      "status": "AMENDED / UPDATED",
+      "effective_date": "21st April, 2025",
+      "mandatory": true,
+      "text": "13. Electronic- type  Volume Conversion  Device   All types 7 years 5 years...",
+      "source_pdf": "Sphygmomanomneters General Rules_1754973919.pdf",
+      "source_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Sphygmomanomneters%20General%20Rules_1754973919.pdf",
+      "amendment_history": [
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2025.4.21 Gas Meter General Rules_1746001659.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2025.4.21%20Gas%20Meter%20General%20Rules_1746001659.pdf",
+          "notification_no": "G.S.R. 242(E)",
+          "date": "21st April, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2026.4.8 Jan Vishwas Act 2026_1777014384.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2026.4.8%20Jan%20Vishwas%20Act%202026_1777014384.pdf",
+          "notification_no": "Act No. 18 of 2023",
+          "date": "11th August, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "8(xii)_0_1732871346.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/8%28xii%29_0_1732871346.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20%28Package%20Commodities%29%20Rules%2C%202011.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040 (1).pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040%20%281%29.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "28th November, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Jan Vishwas (Amendment of Provisions) Act, 2023 (18 of 2023)_1732708241.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Jan%20Vishwas%20%28Amendment%20of%20Provisions%29%20Act%2C%202023%20%2818%20of%202023%29_1732708241.pdf",
+          "notification_no": "Act No. 18 of 2023",
+          "date": "11th August, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "LM_General_Rule_Amendment_2026_1768192719.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/LM_General_Rule_Amendment_2026_1768192719.pdf",
+          "notification_no": "G.S.R. 10(E)",
+          "date": "7th January, 2026"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Sphygmomanomneters General Rules_1754973919.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Sphygmomanomneters%20General%20Rules_1754973919.pdf",
+          "notification_no": "G.S.R. 498(E)",
+          "date": "28 July, 2025"
+        }
+      ]
+    },
+    "RULE_14": {
+      "rule_id": "RULE_14",
+      "clause": "Rule 14",
+      "title": "Flow Computer All types 6 years 4 years",
+      "category": "MEDICAL DEVICES",
+      "is_universal": false,
+      "status": "AMENDED / UPDATED",
+      "effective_date": "21st April, 2025",
+      "mandatory": true,
+      "text": "14. Flow Computer All types 6 years 4 years...",
+      "source_pdf": "Sphygmomanomneters General Rules_1754973919.pdf",
+      "source_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Sphygmomanomneters%20General%20Rules_1754973919.pdf",
+      "amendment_history": [
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2025.4.21 Gas Meter General Rules_1746001659.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2025.4.21%20Gas%20Meter%20General%20Rules_1746001659.pdf",
+          "notification_no": "G.S.R. 242(E)",
+          "date": "21st April, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2026.4.8 Jan Vishwas Act 2026_1777014384.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2026.4.8%20Jan%20Vishwas%20Act%202026_1777014384.pdf",
+          "notification_no": "Act No. 18 of 2023",
+          "date": "11th August, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "8(xii)_0_1732871346.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/8%28xii%29_0_1732871346.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20%28Package%20Commodities%29%20Rules%2C%202011.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040 (1).pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040%20%281%29.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "28th November, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Sphygmomanomneters General Rules_1754973919.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Sphygmomanomneters%20General%20Rules_1754973919.pdf",
+          "notification_no": "G.S.R. 498(E)",
+          "date": "28 July, 2025"
+        }
+      ]
+    },
+    "RULE_15": {
+      "rule_id": "RULE_15",
+      "clause": "Rule 15",
+      "title": "Transducer or",
+      "category": "GENERAL LEGAL METROLOGY PROVISION",
+      "is_universal": true,
+      "status": "AMENDED / UPDATED",
+      "effective_date": "21st April, 2025",
+      "mandatory": true,
+      "text": "15. Transducer or  Transmitter  All types 7 years 5 years    (d) for other Meters, devices, and installations, - Meter devices and installation not covered in  serial numbers 1 to 15 above.   Table 4.  Serial No. Type Sub-type  Initial re-verification period Subsequent re- verification period  (1) (2) (3) (4) (5)...",
+      "source_pdf": "Sphygmomanomneters General Rules_1754973919.pdf",
+      "source_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Sphygmomanomneters%20General%20Rules_1754973919.pdf",
+      "amendment_history": [
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2025.4.21 Gas Meter General Rules_1746001659.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2025.4.21%20Gas%20Meter%20General%20Rules_1746001659.pdf",
+          "notification_no": "G.S.R. 242(E)",
+          "date": "21st April, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2026.4.8 Jan Vishwas Act 2026_1777014384.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2026.4.8%20Jan%20Vishwas%20Act%202026_1777014384.pdf",
+          "notification_no": "Act No. 18 of 2023",
+          "date": "11th August, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "8(xii)_0_1732871346.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/8%28xii%29_0_1732871346.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20%28Package%20Commodities%29%20Rules%2C%202011.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040 (1).pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040%20%281%29.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "28th November, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Jan Vishwas (Amendment of Provisions) Act, 2023 (18 of 2023)_1732708241.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Jan%20Vishwas%20%28Amendment%20of%20Provisions%29%20Act%2C%202023%20%2818%20of%202023%29_1732708241.pdf",
+          "notification_no": "Act No. 18 of 2023",
+          "date": "11th August, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Sphygmomanomneters General Rules_1754973919.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Sphygmomanomneters%20General%20Rules_1754973919.pdf",
+          "notification_no": "G.S.R. 498(E)",
+          "date": "28 July, 2025"
+        }
+      ]
+    },
+    "RULE_16": {
+      "rule_id": "RULE_16",
+      "clause": "Rule 16",
+      "title": "Gas Analyser or",
+      "category": "LEGAL ENFORCEMENT & PENALTIES",
+      "is_universal": false,
+      "status": "AMENDED / UPDATED",
+      "effective_date": "21st April, 2025",
+      "mandatory": true,
+      "text": "16. Gas Analyser or  Chromatograph  All types 1 year 1 year...",
+      "source_pdf": "Jan Vishwas (Amendment of Provisions) Act, 2023 (18 of 2023)_1732708241.pdf",
+      "source_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Jan%20Vishwas%20%28Amendment%20of%20Provisions%29%20Act%2C%202023%20%2818%20of%202023%29_1732708241.pdf",
+      "amendment_history": [
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2025.4.21 Gas Meter General Rules_1746001659.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2025.4.21%20Gas%20Meter%20General%20Rules_1746001659.pdf",
+          "notification_no": "G.S.R. 242(E)",
+          "date": "21st April, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2026.4.8 Jan Vishwas Act 2026_1777014384.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2026.4.8%20Jan%20Vishwas%20Act%202026_1777014384.pdf",
+          "notification_no": "Act No. 18 of 2023",
+          "date": "11th August, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "8(xii)_0_1732871346.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/8%28xii%29_0_1732871346.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20%28Package%20Commodities%29%20Rules%2C%202011.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040 (1).pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040%20%281%29.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "28th November, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Jan Vishwas (Amendment of Provisions) Act, 2023 (18 of 2023)_1732708241.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Jan%20Vishwas%20%28Amendment%20of%20Provisions%29%20Act%2C%202023%20%2818%20of%202023%29_1732708241.pdf",
+          "notification_no": "Act No. 18 of 2023",
+          "date": "11th August, 2023"
+        }
+      ]
+    },
+    "RULE_17": {
+      "rule_id": "RULE_17",
+      "clause": "Rule 17",
+      "title": "Energy Density All types 1 year 1 year",
+      "category": "MEASURING INSTRUMENTS & METERS",
+      "is_universal": false,
+      "status": "AMENDED / UPDATED",
+      "effective_date": "21st April, 2025",
+      "mandatory": true,
+      "text": "17. Energy Density All types 1 year 1 year...",
+      "source_pdf": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+      "source_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+      "amendment_history": [
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2025.4.21 Gas Meter General Rules_1746001659.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2025.4.21%20Gas%20Meter%20General%20Rules_1746001659.pdf",
+          "notification_no": "G.S.R. 242(E)",
+          "date": "21st April, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2026.4.8 Jan Vishwas Act 2026_1777014384.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2026.4.8%20Jan%20Vishwas%20Act%202026_1777014384.pdf",
+          "notification_no": "Act No. 18 of 2023",
+          "date": "11th August, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20%28Package%20Commodities%29%20Rules%2C%202011.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040 (1).pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040%20%281%29.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "28th November, 2025"
+        }
+      ]
+    },
+    "RULE_18": {
+      "rule_id": "RULE_18",
+      "clause": "Rule 18",
+      "title": "Relative Density All types 1 year 1 year",
+      "category": "MEASURING INSTRUMENTS & METERS",
+      "is_universal": false,
+      "status": "AMENDED / UPDATED",
+      "effective_date": "21st April, 2025",
+      "mandatory": true,
+      "text": "18. Relative Density All types 1 year 1 year...",
+      "source_pdf": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+      "source_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+      "amendment_history": [
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2025.4.21 Gas Meter General Rules_1746001659.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2025.4.21%20Gas%20Meter%20General%20Rules_1746001659.pdf",
+          "notification_no": "G.S.R. 242(E)",
+          "date": "21st April, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2026.4.8 Jan Vishwas Act 2026_1777014384.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2026.4.8%20Jan%20Vishwas%20Act%202026_1777014384.pdf",
+          "notification_no": "Act No. 18 of 2023",
+          "date": "11th August, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20%28Package%20Commodities%29%20Rules%2C%202011.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040 (1).pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040%20%281%29.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "28th November, 2025"
+        }
+      ]
+    },
+    "RULE_19": {
+      "rule_id": "RULE_19",
+      "clause": "Rule 19",
+      "title": "Flow Conditioner Perforated plate same as the host meter same as the host meter",
+      "category": "MEASURING INSTRUMENTS & METERS",
+      "is_universal": false,
+      "status": "AMENDED / UPDATED",
+      "effective_date": "21st April, 2025",
+      "mandatory": true,
+      "text": "19.  Flow Conditioner Perforated plate same as the host meter same as the host meter    Tube bundle  (straightening  vanes)  same as the host meter same as the host meter...",
+      "source_pdf": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+      "source_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+      "amendment_history": [
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2025.4.21 Gas Meter General Rules_1746001659.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2025.4.21%20Gas%20Meter%20General%20Rules_1746001659.pdf",
+          "notification_no": "G.S.R. 242(E)",
+          "date": "21st April, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2026.4.8 Jan Vishwas Act 2026_1777014384.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2026.4.8%20Jan%20Vishwas%20Act%202026_1777014384.pdf",
+          "notification_no": "Act No. 18 of 2023",
+          "date": "11th August, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20%28Package%20Commodities%29%20Rules%2C%202011.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040 (1).pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040%20%281%29.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "28th November, 2025"
+        }
+      ]
+    },
+    "RULE_20": {
+      "rule_id": "RULE_20",
+      "clause": "Rule 20",
+      "title": "Correction Device All types   same as the host meter same as the host meter",
+      "category": "MEASURING INSTRUMENTS & METERS",
+      "is_universal": false,
+      "status": "AMENDED / UPDATED",
+      "effective_date": "21st April, 2025",
+      "mandatory": true,
+      "text": "20. Correction Device All types (2)  same as the host meter same as the host meter...",
+      "source_pdf": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+      "source_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+      "amendment_history": [
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2025.4.21 Gas Meter General Rules_1746001659.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2025.4.21%20Gas%20Meter%20General%20Rules_1746001659.pdf",
+          "notification_no": "G.S.R. 242(E)",
+          "date": "21st April, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2026.4.8 Jan Vishwas Act 2026_1777014384.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2026.4.8%20Jan%20Vishwas%20Act%202026_1777014384.pdf",
+          "notification_no": "Act No. 18 of 2023",
+          "date": "11th August, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20%28Package%20Commodities%29%20Rules%2C%202011.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040 (1).pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040%20%281%29.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "28th November, 2025"
+        }
+      ]
+    },
+    "RULE_21": {
+      "rule_id": "RULE_21",
+      "clause": "Rule 21",
+      "title": "Ticket printer All types same as the host meter same as the host meter",
+      "category": "MEASURING INSTRUMENTS & METERS",
+      "is_universal": false,
+      "status": "AMENDED / UPDATED",
+      "effective_date": "21st April, 2025",
+      "mandatory": true,
+      "text": "21. Ticket printer All types same as the host meter same as the host meter...",
+      "source_pdf": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+      "source_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+      "amendment_history": [
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2025.4.21 Gas Meter General Rules_1746001659.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2025.4.21%20Gas%20Meter%20General%20Rules_1746001659.pdf",
+          "notification_no": "G.S.R. 242(E)",
+          "date": "21st April, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2026.4.8 Jan Vishwas Act 2026_1777014384.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2026.4.8%20Jan%20Vishwas%20Act%202026_1777014384.pdf",
+          "notification_no": "Act No. 18 of 2023",
+          "date": "11th August, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20%28Package%20Commodities%29%20Rules%2C%202011.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040 (1).pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040%20%281%29.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "28th November, 2025"
+        }
+      ]
+    },
+    "RULE_22": {
+      "rule_id": "RULE_22",
+      "clause": "Rule 22",
+      "title": "Telemetering Device",
+      "category": "LEGAL ENFORCEMENT & PENALTIES",
+      "is_universal": false,
+      "status": "AMENDED / UPDATED",
+      "effective_date": "21st April, 2025",
+      "mandatory": true,
+      "text": "22. Telemetering Device  or System  All types same as the host meter same as the host meter...",
+      "source_pdf": "Jan Vishwas (Amendment of Provisions) Act, 2023 (18 of 2023)_1732708241.pdf",
+      "source_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Jan%20Vishwas%20%28Amendment%20of%20Provisions%29%20Act%2C%202023%20%2818%20of%202023%29_1732708241.pdf",
+      "amendment_history": [
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2025.4.21 Gas Meter General Rules_1746001659.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2025.4.21%20Gas%20Meter%20General%20Rules_1746001659.pdf",
+          "notification_no": "G.S.R. 242(E)",
+          "date": "21st April, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2026.4.8 Jan Vishwas Act 2026_1777014384.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2026.4.8%20Jan%20Vishwas%20Act%202026_1777014384.pdf",
+          "notification_no": "Act No. 18 of 2023",
+          "date": "11th August, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20%28Package%20Commodities%29%20Rules%2C%202011.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040 (1).pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040%20%281%29.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "28th November, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Jan Vishwas (Amendment of Provisions) Act, 2023 (18 of 2023)_1732708241.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Jan%20Vishwas%20%28Amendment%20of%20Provisions%29%20Act%2C%202023%20%2818%20of%202023%29_1732708241.pdf",
+          "notification_no": "Act No. 18 of 2023",
+          "date": "11th August, 2023"
+        }
+      ]
+    },
+    "RULE_23": {
+      "rule_id": "RULE_23",
+      "clause": "Rule 23",
+      "title": "Metering Installations Pressure factor",
+      "category": "MEASURING INSTRUMENTS & METERS",
+      "is_universal": false,
+      "status": "AMENDED / UPDATED",
+      "effective_date": "21st April, 2025",
+      "mandatory": true,
+      "text": "23.  Metering Installations Pressure factor  metering (PFM)  same as the host meter same as the host meter    All other types same as the host meter same as the host meter    Note (1):  Re-verification period shall be as stated above and the devices shall be inspected at their operational  location at the time of re-verification of meter.      Note...",
+      "source_pdf": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+      "source_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+      "amendment_history": [
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2025.4.21 Gas Meter General Rules_1746001659.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2025.4.21%20Gas%20Meter%20General%20Rules_1746001659.pdf",
+          "notification_no": "G.S.R. 242(E)",
+          "date": "21st April, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2026.4.8 Jan Vishwas Act 2026_1777014384.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2026.4.8%20Jan%20Vishwas%20Act%202026_1777014384.pdf",
+          "notification_no": "Act No. 18 of 2023",
+          "date": "11th August, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20%28Package%20Commodities%29%20Rules%2C%202011.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040 (1).pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040%20%281%29.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "28th November, 2025"
+        }
+      ]
+    },
+    "RULE_28": {
+      "rule_id": "RULE_28",
+      "clause": "Rule 28",
+      "title": "Penalty and adjudication.\u2013\u2013 Whoever,\u2014",
+      "category": "MEASURING INSTRUMENTS & METERS",
+      "is_universal": false,
+      "status": "AMENDED / UPDATED",
+      "effective_date": "11th August, 2023",
+      "mandatory": true,
+      "text": "28. Penalty and adjudication.\u2013\u2013(1) Whoever,\u2014  (a) contravenes any provision of this Act, other  than those covered under sub-sections (1), (2) and (3)  of section 23;      Sec. 1]                      THE GAZETTE OF INDIA EXTRAORDINARY 123123 (1) (2) (3) (4) (5) (b) contravenes the provisions of the rules made  under this Act [except rules made und...",
+      "source_pdf": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+      "source_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+      "amendment_history": [
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2026.4.8 Jan Vishwas Act 2026_1777014384.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2026.4.8%20Jan%20Vishwas%20Act%202026_1777014384.pdf",
+          "notification_no": "Act No. 18 of 2023",
+          "date": "11th August, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "28th November, 2025"
+        }
+      ]
+    },
+    "RULE_24": {
+      "rule_id": "RULE_24",
+      "clause": "Rule 24",
+      "title": "Tularemia.",
+      "category": "MEASURING INSTRUMENTS & METERS",
+      "is_universal": false,
+      "status": "AMENDED / UPDATED",
+      "effective_date": "11th August, 2023",
+      "mandatory": true,
+      "text": "24. Tularemia....",
+      "source_pdf": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+      "source_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+      "amendment_history": [
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2026.4.8 Jan Vishwas Act 2026_1777014384.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2026.4.8%20Jan%20Vishwas%20Act%202026_1777014384.pdf",
+          "notification_no": "Act No. 18 of 2023",
+          "date": "11th August, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20%28Package%20Commodities%29%20Rules%2C%202011.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040 (1).pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040%20%281%29.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "28th November, 2025"
+        }
+      ]
+    },
+    "RULE_25": {
+      "rule_id": "RULE_25",
+      "clause": "Rule 25",
+      "title": "Vesicular stomatitis.",
+      "category": "MEASURING INSTRUMENTS & METERS",
+      "is_universal": false,
+      "status": "AMENDED / UPDATED",
+      "effective_date": "11th August, 2023",
+      "mandatory": true,
+      "text": "25. Vesicular stomatitis....",
+      "source_pdf": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+      "source_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+      "amendment_history": [
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2026.4.8 Jan Vishwas Act 2026_1777014384.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2026.4.8%20Jan%20Vishwas%20Act%202026_1777014384.pdf",
+          "notification_no": "Act No. 18 of 2023",
+          "date": "11th August, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20%28Package%20Commodities%29%20Rules%2C%202011.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040 (1).pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040%20%281%29.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "28th November, 2025"
+        }
+      ]
+    },
+    "RULE_26": {
+      "rule_id": "RULE_26",
+      "clause": "Rule 26",
+      "title": "West Nile fever.",
+      "category": "MEASURING INSTRUMENTS & METERS",
+      "is_universal": false,
+      "status": "AMENDED / UPDATED",
+      "effective_date": "11th August, 2023",
+      "mandatory": true,
+      "text": "26. West Nile fever. (b) Bovine diseases...",
+      "source_pdf": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+      "source_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+      "amendment_history": [
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2026.4.8 Jan Vishwas Act 2026_1777014384.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2026.4.8%20Jan%20Vishwas%20Act%202026_1777014384.pdf",
+          "notification_no": "Act No. 18 of 2023",
+          "date": "11th August, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20%28Package%20Commodities%29%20Rules%2C%202011.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040 (1).pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040%20%281%29.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "28th November, 2025"
+        }
+      ]
+    },
+    "RULE_27": {
+      "rule_id": "RULE_27",
+      "clause": "Rule 27",
+      "title": "If any port",
+      "category": "MEASURING INSTRUMENTS & METERS",
+      "is_universal": false,
+      "status": "AMENDED / UPDATED",
+      "effective_date": "11th August, 2023",
+      "mandatory": true,
+      "text": "27. If any port  fails to provide  shore based  welfare  services in  contravention  of section 68  68 Penalty  which  may  extend to  twenty  thousand  rupees....",
+      "source_pdf": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+      "source_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+      "amendment_history": [
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2026.4.8 Jan Vishwas Act 2026_1777014384.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2026.4.8%20Jan%20Vishwas%20Act%202026_1777014384.pdf",
+          "notification_no": "Act No. 18 of 2023",
+          "date": "11th August, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20%28Package%20Commodities%29%20Rules%2C%202011.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040 (1).pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040%20%281%29.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9_1732872040.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9_1732872040.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "28th November, 2025"
+        }
+      ]
+    },
+    "RULE_29": {
+      "rule_id": "RULE_29",
+      "clause": "Rule 29",
+      "title": "If any port",
+      "category": "MEASURING INSTRUMENTS & METERS",
+      "is_universal": false,
+      "status": "AMENDED / UPDATED",
+      "effective_date": "11th August, 2023",
+      "mandatory": true,
+      "text": "29. If any port fails to develop  or maintain a  vessel traffic  service in  contravention  of sub- section  (2) of section 69 69(2) Penalty  which  may  extend to  one lakh  rupees.\u201d. \u2014\u2014\u2014          The above Bill has been passed by the Houses of Parliament. \u2014\u2014\u2014 Dated the                                                                               ...",
+      "source_pdf": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+      "source_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+      "amendment_history": [
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "2026.4.8 Jan Vishwas Act 2026_1777014384.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/2026.4.8%20Jan%20Vishwas%20Act%202026_1777014384.pdf",
+          "notification_no": "Act No. 18 of 2023",
+          "date": "11th August, 2023"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20%28Package%20Commodities%29%20Rules%2C%202011.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "28th November, 2025"
+        }
+      ]
+    },
+    "RULE_30": {
+      "rule_id": "RULE_30",
+      "clause": "Rule 30",
+      "title": "Compilation of lists of manufacturers or packers and their circulation. \u2013",
+      "category": "MEASURING INSTRUMENTS & METERS",
+      "is_universal": false,
+      "status": "AMENDED / UPDATED",
+      "effective_date": "7th March, 2011",
+      "mandatory": true,
+      "text": "30. Compilation of lists of manufacturers or packers and their circulation. \u2013   The Director or the Controller shall compile a State-wise list of the manufacturers and  packers registered by him under rule 29 and shal l circulate such list to the Controller of  the concerned State to enable the Controller to  take, or cause to be taken, samples at ...",
+      "source_pdf": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+      "source_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+      "amendment_history": [
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20%28Package%20Commodities%29%20Rules%2C%202011.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "28th November, 2025"
+        }
+      ]
+    },
+    "RULE_32": {
+      "rule_id": "RULE_32",
+      "clause": "Rule 32",
+      "title": "Penalty for contravention of Rules",
+      "category": "MEASURING INSTRUMENTS & METERS",
+      "is_universal": false,
+      "status": "AMENDED / UPDATED",
+      "effective_date": "7th March, 2011",
+      "mandatory": true,
+      "text": "32. Penalty for contravention of Rules  (1) Whoever contravenes the provisions of rule s 27 to 31, he shall be punished with fine  of four thousand rupees.  (2) Whoever contravenes any other provision of these rules, for the contravention of  which no punishment has been provided either  in the Act or in the rules he shall be  punished with fine of...",
+      "source_pdf": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+      "source_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+      "amendment_history": [
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20%28Package%20Commodities%29%20Rules%2C%202011.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "28th November, 2025"
+        }
+      ]
+    },
+    "RULE_33": {
+      "rule_id": "RULE_33",
+      "clause": "Rule 33",
+      "title": "Power to relax:",
+      "category": "MEASURING INSTRUMENTS & METERS",
+      "is_universal": false,
+      "status": "AMENDED / UPDATED",
+      "effective_date": "7th March, 2011",
+      "mandatory": true,
+      "text": "33. Power to relax:   The Central Government may, after ascertain ing the genuineness of the compounding of  a case or Court decision stated in the application, permit a manufacturer or packer to pack  for sale the packages for a reasonable period by relaxing one or more provision of these  Rules with such corrective measures as may be specified....",
+      "source_pdf": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+      "source_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+      "amendment_history": [
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20%28Package%20Commodities%29%20Rules%2C%202011.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "28th November, 2025"
+        }
+      ]
+    },
+    "RULE_34": {
+      "rule_id": "RULE_34",
+      "clause": "Rule 34",
+      "title": "Repeal and savings.-",
+      "category": "MEASURING INSTRUMENTS & METERS",
+      "is_universal": false,
+      "status": "AMENDED / UPDATED",
+      "effective_date": "7th March, 2011",
+      "mandatory": true,
+      "text": "34. Repeal and savings.-   Page 26 of 43  (1) The Standards of Weights and Measures (Packaged Commodities) Rules, 1977 are  hereby repealed.  Provided that such repeal shall no t affect:  (a) the previous operations of the said rules or anything done or omitted to be done or  suffered therein; or  (b) any right, privilege, obligation or liability a...",
+      "source_pdf": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+      "source_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+      "amendment_history": [
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "9 The Legal Metrology (Package Commodities) Rules, 2011.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/9%20The%20Legal%20Metrology%20%28Package%20Commodities%29%20Rules%2C%202011.pdf",
+          "notification_no": "G.S.R. 202(E)",
+          "date": "7th March, 2011"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "28th November, 2025"
+        }
+      ]
+    },
+    "RULE_31": {
+      "rule_id": "RULE_31",
+      "clause": "Rule 31",
+      "title": "Sub-clause  of clause  of",
+      "category": "MEASURING INSTRUMENTS & METERS",
+      "is_universal": false,
+      "status": "AMENDED",
+      "effective_date": "28th November, 2025",
+      "mandatory": true,
+      "text": "31. Sub-clause (M) of clause (viii) of  sub-paragraph (5)   Mechanical shock Applicable Applicable...",
+      "source_pdf": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+      "source_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+      "amendment_history": [
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "28th November, 2025"
+        }
+      ]
+    },
+    "RULE_35": {
+      "rule_id": "RULE_35",
+      "clause": "Rule 35",
+      "title": "Sub-clause  of clause  of Vibration (as Applicable Applicable",
+      "category": "MEASURING INSTRUMENTS & METERS",
+      "is_universal": false,
+      "status": "AMENDED",
+      "effective_date": "28th November, 2025",
+      "mandatory": true,
+      "text": "35. Sub-clause (Q) of clause (viii) of Vibration (as Applicable Applicable   [\u092d\u093e\u0917 II\u2014\u0916\u0923\u094d\u200d \u0921 3(i)] \u092d\u093e\u0930\u0924\u200d\u0915\u093e\u200d\u0930\u093e\u091c\u092a\u0924\u094d\u0930\u200d \u200d:\u0923\u0930\u093e\u0927\u093e\u0930\u0905  173        sub-paragraph (5)  disturbance)...",
+      "source_pdf": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+      "source_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+      "amendment_history": [
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "28th November, 2025"
+        }
+      ]
+    },
+    "RULE_36": {
+      "rule_id": "RULE_36",
+      "clause": "Rule 36",
+      "title": "Clause  of sub-paragraph",
+      "category": "MEASURING INSTRUMENTS & METERS",
+      "is_universal": false,
+      "status": "AMENDED",
+      "effective_date": "28th November, 2025",
+      "mandatory": true,
+      "text": "36. Clause (ix) of sub-paragraph (5)     Physiological influence  substances  Applicable Applicable (i) Dry gases  or gases  without CO2  are allowed in  combination  with a  preliminary  repeatability  test performed  with wet gases.     (ii) This shall  consist of the  repeatability  test  specified in  sub-clause (a)  of clause (v) of  sub-parag...",
+      "source_pdf": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+      "source_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+      "amendment_history": [
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "28th November, 2025"
+        }
+      ]
+    },
+    "RULE_37": {
+      "rule_id": "RULE_37",
+      "clause": "Rule 37",
+      "title": "Clause  of sub-paragraph   Sand and dust  Applicable",
+      "category": "MEASURING INSTRUMENTS & METERS",
+      "is_universal": false,
+      "status": "AMENDED",
+      "effective_date": "28th November, 2025",
+      "mandatory": true,
+      "text": "37. Clause (i) of sub-paragraph (6)  Sand and dust  Applicable...",
+      "source_pdf": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+      "source_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+      "amendment_history": [
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "28th November, 2025"
+        }
+      ]
+    },
+    "RULE_38": {
+      "rule_id": "RULE_38",
+      "clause": "Rule 38",
+      "title": "Clause  of sub-paragraph  Salt mist  Applicable",
+      "category": "MEASURING INSTRUMENTS & METERS",
+      "is_universal": false,
+      "status": "AMENDED",
+      "effective_date": "28th November, 2025",
+      "mandatory": true,
+      "text": "38. Clause (ii) of sub-paragraph (6) Salt mist  Applicable...",
+      "source_pdf": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+      "source_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+      "amendment_history": [
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "28th November, 2025"
+        }
+      ]
+    },
+    "RULE_39": {
+      "rule_id": "RULE_39",
+      "clause": "Rule 39",
+      "title": "Clause  of sub-paragraph",
+      "category": "LEGAL ENFORCEMENT & PENALTIES",
+      "is_universal": false,
+      "status": "AMENDED / UPDATED",
+      "effective_date": "28th November, 2025",
+      "mandatory": true,
+      "text": "39.  Clause (iii) of sub-paragraph (6)    Water  Applicable     (X) Some of the tests specified in clause (vi) of sub-paragraph (5) require a generator with the ability to vary the flowrate  or alcohol concentration during breath exhalation. The actual performance details of the test gas evolution for each test  are  specified in sub-clause (a) cla...",
+      "source_pdf": "Jan Vishwas (Amendment of Provisions) Act, 2023 (18 of 2023)_1732708241.pdf",
+      "source_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Jan%20Vishwas%20%28Amendment%20of%20Provisions%29%20Act%2C%202023%20%2818%20of%202023%29_1732708241.pdf",
+      "amendment_history": [
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Gen Rules 6th Amendment Breath Analyser_1764862018.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Gen%20Rules%206th%20Amendment%20Breath%20Analyser_1764862018.pdf",
+          "notification_no": "G.S.R. 875(E)",
+          "date": "28th November, 2025"
+        },
+        {
+          "event": "AMENDMENT / GAZETTE UPDATE",
+          "pdf_name": "Jan Vishwas (Amendment of Provisions) Act, 2023 (18 of 2023)_1732708241.pdf",
+          "pdf_url": "file:///C%3A/Users/Taranjeet%20Singh/Desktop/legal_metrology_compliance/input_pdfs/Jan%20Vishwas%20%28Amendment%20of%20Provisions%29%20Act%2C%202023%20%2818%20of%202023%29_1732708241.pdf",
+          "notification_no": "Act No. 18 of 2023",
+          "date": "11th August, 2023"
+        }
+      ]
+    }
+  }
+}

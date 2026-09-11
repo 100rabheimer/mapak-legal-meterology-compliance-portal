@@ -1,0 +1,88 @@
+# ======================================================
+# MAPAK Legal Metrology Compliance Portal — .gitignore
+# ======================================================
+
+# ----- Python -----
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+*.pyo
+*.pyc
+*.log
+*.pot
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ----- Virtual Environments -----
+venv/
+.venv/
+env/
+ENV/
+.env.local
+
+# ----- Environment / Secrets -----
+.env
+*.env
+!.env.example
+
+# ----- Database & Runtime Output -----
+*/output/legal_metrology_relational.db
+*/output/uploads/
+*/output/annotated/
+*/output/notices/
+*/output/*.log
+*/output/reports/
+legal_metrology_module3/output/legal_metrology_relational.db
+
+# Keep output folder structure but not generated files
+!*/output/.gitkeep
+!*/output/samples/
+
+# ----- Node.js / React UI -----
+node_modules/
+dist/
+.cache/
+.parcel-cache/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.tsbuildinfo
+.npm
+
+# ----- IDE -----
+.vscode/settings.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ----- OS -----
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.lnk
+
+# ----- Jupyter -----
+.ipynb_checkpoints/
+*.ipynb
+
+# ----- Logs -----
+logs/
+*.log
+npm-debug.log*
+
+# ----- Misc -----
+*.bak
+*.tmp
+*.temp
