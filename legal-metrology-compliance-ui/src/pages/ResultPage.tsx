@@ -1,22 +1,57 @@
 import { useState } from "react";
 import { AlertTriangle, CheckCircle2, Download, FileCheck, FileText, Gavel, Printer, ShieldAlert, X } from "lucide-react";
 import { StatusBadge } from "../components/common/StatusBadge";
-import { runVisionInspectionPipeline } from "../services/visionAiService";
 import { generateLegalDocumentContent } from "../services/legalNoticeGenerator";
 import { getActiveInspection, triggerPdfDownload } from "../services/apiClient";
 
 export function ResultPage() {
   const [showDocModal, setShowDocModal] = useState(false);
 
-  // Execute 3-Module Integration Pipeline
   const activeReport = getActiveInspection();
-  const record = runVisionInspectionPipeline(
-    activeReport?.entity_info?.commodity_name || "Herbal Shampoo 180 ml",
-    activeReport?.entity_info?.manufacturer_name_address || "GreenCare Pvt. Ltd."
-  );
+  
+  const record = {
+    inspectionNumber: activeReport?.inspection_id || "N/A",
+    productName: activeReport?.entity_info?.commodity_name || "Unknown Product",
+    companyName: activeReport?.entity_info?.manufacturer_name_address || "Unknown Company",
+    aggregatedAt: activeReport?.timestamp || new Date().toISOString(),
+    complianceResult: {
+      overallStatus: activeReport?.is_compliant ? "compliant" : (activeReport?.violations?.length > 0 ? "violation" : "warning"),
+      complianceScore: activeReport?.compliance_score || 0,
+      violations: (activeReport?.violations || []).map((v: any, i: number) => ({
+        id: `v-${i}`,
+        statutorySection: v.clause || "Rule 6(1)",
+        title: v.title || "Statutory Violation",
+        severity: v.severity?.toLowerCase() || "major",
+        description: v.description || "",
+        observedValue: "Non-compliant format",
+        remedy: v.remedy || "Rectify declaration as per rules"
+      })),
+      declarations: [
+        {
+          id: "decl-1",
+          label: "Product Name / Commodity",
+          value: activeReport?.entity_info?.commodity_name || "Not Found",
+          status: activeReport?.non_compliant_fields?.includes("generic_name") ? "needs_review" : "verified"
+        },
+        {
+          id: "decl-2",
+          label: "Net Quantity",
+          value: activeReport?.entity_info?.net_quantity || "Not Found",
+          status: activeReport?.non_compliant_fields?.includes("net_quantity") ? "needs_review" : "verified"
+        },
+        {
+          id: "decl-3",
+          label: "Maximum Retail Price (MRP)",
+          value: activeReport?.entity_info?.mrp || "Not Found",
+          status: activeReport?.violations?.some((v: any) => v.field === "mrp") ? "needs_review" : "verified"
+        }
+      ]
+    }
+  };
+
   const { complianceResult, inspectionNumber, productName, companyName } = record;
 
-  const legalDoc = generateLegalDocumentContent(record);
+  const legalDoc = generateLegalDocumentContent(record as any);
 
   const noticeDownloadUrl = activeReport?.notice?.notice_url || "http://localhost:8000/api/download_latest_notice";
 

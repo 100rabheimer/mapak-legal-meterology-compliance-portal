@@ -127,8 +127,25 @@ export const ProductsPage: React.FC = () => {
           {filtered.map((item, idx) => {
             const pName = item.entity_info?.commodity_name || (item as any).product_name || "Pre-Packaged Goods";
             const cName = item.entity_info?.manufacturer_name_address || (item as any).company_name || "Enterprise Ltd.";
-            const netQty = item.entity_info?.net_quantity || "180 gms";
-            const mrp = item.entity_info?.mrp || "₹199.00";
+            const netQty = item.entity_info?.net_quantity && item.entity_info.net_quantity !== "Not Specified"
+              ? item.entity_info.net_quantity
+              : "Not Detected";
+            const mrp = item.entity_info?.mrp && item.entity_info.mrp !== "Not Specified"
+              ? item.entity_info.mrp
+              : "Not Detected";
+
+            const formatDate = (ts?: string) => {
+              if (!ts) return "Recent";
+              const d = new Date(ts);
+              if (!isNaN(d.getTime())) {
+                return d.toLocaleDateString("en-IN", { day: "2-digit", month: "short", year: "numeric" });
+              }
+              const m = ts.match(/(\d{2})[-/](\d{2})[-/](\d{4})/);
+              if (m) {
+                return `${m[1]}/${m[2]}/${m[3]}`;
+              }
+              return "Recent";
+            };
 
             return (
               <div
@@ -146,7 +163,7 @@ export const ProductsPage: React.FC = () => {
                       </span>
                     ) : (
                       <span className="inline-flex items-center gap-1 text-rose-600 dark:text-rose-400 font-bold text-xs">
-                        <XCircle className="w-4 h-4" /> Violation ({item.compliance_score}%)
+                        <XCircle className="w-4 h-4" /> Non-Compliant ({item.compliance_score}% Score)
                       </span>
                     )}
                   </div>
@@ -163,11 +180,15 @@ export const ProductsPage: React.FC = () => {
                   <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 grid grid-cols-2 gap-2 text-xs">
                     <div className="bg-slate-50 dark:bg-slate-800/60 p-2 rounded-lg">
                       <span className="text-slate-400">Net Quantity:</span>
-                      <div className="font-semibold text-slate-800 dark:text-slate-200 mt-0.5">{netQty}</div>
+                      <div className="font-semibold text-slate-800 dark:text-slate-200 mt-0.5 truncate" title={netQty}>
+                        {netQty}
+                      </div>
                     </div>
                     <div className="bg-slate-50 dark:bg-slate-800/60 p-2 rounded-lg">
                       <span className="text-slate-400">Retail Price (MRP):</span>
-                      <div className="font-semibold text-slate-800 dark:text-slate-200 mt-0.5">{mrp}</div>
+                      <div className="font-semibold text-slate-800 dark:text-slate-200 mt-0.5 truncate" title={mrp}>
+                        {mrp}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -175,7 +196,7 @@ export const ProductsPage: React.FC = () => {
                 <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 flex justify-between items-center text-xs text-slate-500">
                   <span className="flex items-center gap-1">
                     <Calendar className="w-3.5 h-3.5" />
-                    {item.timestamp ? new Date(item.timestamp).toLocaleDateString() : "Recent"}
+                    {formatDate(item.timestamp)}
                   </span>
                   <a
                     href={item.notice?.notice_url || "http://localhost:8000/api/download_latest_notice"}

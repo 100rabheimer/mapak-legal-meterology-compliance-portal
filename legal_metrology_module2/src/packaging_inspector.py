@@ -165,13 +165,20 @@ class PackagingInspector:
                 if "net_quantity" in compliant_fields:
                     compliant_fields.remove("net_quantity")
 
-        # Calculate Compliance Score (0 - 100%)
-        total_checks = len(self.MANDATORY_FIELDS) + 2  # Mandatory + Unit Symbol + Font Size
-        critical_violations = [v for v in violations if v["severity"] == "CRITICAL"]
-        major_violations = [v for v in violations if v["severity"] == "MAJOR"]
+        # Calculate Compliance Score (0 - 100%) dynamically from statutory verification
+        total_mandatory = len(self.MANDATORY_FIELDS)
+        compliant_ratio = len(compliant_fields) / float(total_mandatory) if total_mandatory > 0 else 0.0
         
-        penalty_score = (len(critical_violations) * 20) + (len(major_violations) * 10)
-        compliance_score = max(0, 100 - penalty_score)
+        # Penalties for statutory defects on present declarations (e.g. font height, illegal unit, missing tax clause)
+        statutory_defects = [v for v in violations if v.get("rule_id") in ["RULE_11_UNITS", "RULE_7_FONT", "RULE_6_1_E_TAXES", "RULE_6_1_E_CURRENCY"]]
+        defect_penalty = len(statutory_defects) * 5.0
+        
+        base_score = compliant_ratio * 100.0
+        compliance_score = max(0, min(100, int(round(base_score - defect_penalty))))
+        if len(violations) == 0:
+            compliance_score = 100
+        elif compliance_score >= 100:
+            compliance_score = 95
         is_fully_compliant = len(violations) == 0
 
         # Extract linked rule metadata from rules_knowledge_base.json if available

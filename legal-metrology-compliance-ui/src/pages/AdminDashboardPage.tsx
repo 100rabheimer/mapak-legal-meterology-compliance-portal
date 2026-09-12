@@ -67,37 +67,43 @@ export function AdminDashboardPage() {
 
   return (
     <div className="space-y-7 max-w-7xl mx-auto">
-      <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
-        <div>
-          <p className="text-xs font-extrabold uppercase tracking-wider text-blue-600">
-            Administrator Enforcement Control Center
-          </p>
+      <div className="relative overflow-hidden rounded-2xl bg-linear-to-r from-blue-600 to-indigo-700 p-8 text-white shadow-lg">
+        <div className="relative z-10 flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
+          <div className="max-w-2xl">
+            <p className="text-xs font-extrabold uppercase tracking-wider text-blue-200">
+              Administrator Enforcement Control Center
+            </p>
 
-          <h1 className="page-title mt-1">System Administration Dashboard</h1>
+            <h1 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">System Administration Dashboard</h1>
 
-          <p className="page-description">
-            Manage officer accounts, monitor field inspection workloads, and audit statutory compliance telemetry.
-          </p>
+            <p className="mt-3 text-sm leading-relaxed text-blue-100 sm:text-base">
+              Manage officer accounts, monitor field inspection workloads, and audit statutory compliance telemetry.
+            </p>
+          </div>
+
+          <div className="flex gap-3">
+            <button
+              onClick={loadAdminData}
+              disabled={loading}
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-white/10 px-4 py-2.5 text-sm font-semibold text-white backdrop-blur-md transition hover:bg-white/20"
+            >
+              <RefreshCw className={`h-4 w-4 ${loading ? "animate-spin" : ""}`} />
+              Refresh
+            </button>
+
+            <Link
+              to="/admin/officers"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-4 py-2.5 text-sm font-bold text-blue-700 transition hover:bg-blue-50 shadow-sm"
+            >
+              <UserCog className="h-4 w-4" />
+              Manage Officers
+            </Link>
+          </div>
         </div>
-
-        <div className="flex gap-2">
-          <button
-            onClick={loadAdminData}
-            disabled={loading}
-            className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 px-4 py-2.5 text-sm font-semibold text-slate-700 dark:text-slate-200 transition hover:bg-slate-50 shadow-xs"
-          >
-            <RefreshCw className={`h-4 w-4 ${loading ? "animate-spin" : ""}`} />
-            Refresh
-          </button>
-
-          <Link
-            to="/admin/officers"
-            className="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-700 shadow-md"
-          >
-            <UserCog className="h-4 w-4" />
-            Manage Officers
-          </Link>
-        </div>
+        
+        {/* Decorative background pattern */}
+        <div className="absolute -right-20 -top-20 z-0 h-64 w-64 rounded-full bg-white/10 blur-3xl" />
+        <div className="absolute -bottom-32 -left-20 z-0 h-80 w-80 rounded-full bg-indigo-500/20 blur-3xl" />
       </div>
 
       {/* Real-Time Metric Cards */}
@@ -250,7 +256,7 @@ export function AdminDashboardPage() {
 
         <div className="overflow-x-auto">
           <table className="min-w-full text-left">
-            <thead className="bg-slate-50 dark:bg-slate-800 text-xs font-semibold uppercase tracking-wide text-slate-500">
+            <thead className="bg-slate-50 dark:bg-slate-800 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
               <tr>
                 <th className="px-6 py-4">Officer Name & Email</th>
                 <th className="px-6 py-4">Badge Number</th>

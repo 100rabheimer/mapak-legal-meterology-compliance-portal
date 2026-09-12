@@ -22,6 +22,8 @@ class OCRExtractor:
 
     # Gemini model fallback chain - prioritized by current availability and low latency
     GEMINI_MODEL_CHAIN = [
+        "gemini-2.5-flash",
+        "gemini-2.0-flash",
         "gemini-3.5-flash-lite",
         "gemini-3.5-flash",
         "gemini-3.8-flash",
@@ -170,7 +172,22 @@ Return ONLY a valid JSON object matching this schema:
         elif "```" in response_text:
             response_text = response_text.split("```")[1].split("```")[0].strip()
 
-        parsed = json.loads(response_text)
+        try:
+            parsed = json.loads(response_text)
+        except json.JSONDecodeError:
+            # Fallback 1: Remove trailing commas before closing braces/brackets
+            cleaned = re.sub(r',\s*([\]}])', r'\1', response_text)
+            # Fallback 2: Extract content between first { and last }
+            first_brace = cleaned.find('{')
+            last_brace = cleaned.rfind('}')
+            if first_brace != -1 and last_brace != -1:
+                cleaned = cleaned[first_brace:last_brace+1]
+            try:
+                parsed = json.loads(cleaned)
+            except Exception:
+                # Fallback 3: Replace unescaped internal quotes
+                cleaned = re.sub(r'(?<=:\s*")([^"\\]*(?:\\.[^"\\]*)*)"(?=[^,}\]\s])', r"\1'", cleaned)
+                parsed = json.loads(cleaned)
 
         # Union label_box and value_box for mrp and usp if both detected
         if "fields" in parsed:
@@ -236,7 +253,7 @@ Return ONLY a valid JSON object matching this schema:
                         mrp_b[2] = round(split_y, 1)
                         usp_b[0] = round(split_y, 1)
 
-        # Convert normalized box_2d [ymin, xmin, ymax, xmax] (0-100 or 0-1000) to pixel coordinates [x1, y1, x2, y2]
+        # Convert normalized box_2d [ymin, xmin, ymax, xmax] (0-1, 0-100 or 0-1000) to pixel coordinates [x1, y1, x2, y2]
         img_h, img_w = image.shape[:2]
         if "fields" in parsed:
             for field_key, fdata in parsed["fields"].items():
@@ -244,7 +261,12 @@ Return ONLY a valid JSON object matching this schema:
                 if box and len(box) == 4:
                     box_vals = [float(v) for v in box]
                     max_val = max(box_vals)
-                    denom = 100.0 if max_val <= 100.0 else 1000.0
+                    if max_val <= 1.0:
+                        denom = 1.0
+                    elif max_val <= 100.0:
+                        denom = 100.0
+                    else:
+                        denom = 1000.0
                     ymin, xmin, ymax, xmax = box_vals
                     
                     ymin_c, ymax_c = min(ymin, ymax), max(ymin, ymax)

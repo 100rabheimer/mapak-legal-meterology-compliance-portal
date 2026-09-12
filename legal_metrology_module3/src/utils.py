@@ -15,8 +15,8 @@ def generate_notice_number() -> str:
     return f"DOCA/LM/ENF/{now.year}/{now.strftime('%m')}-{rand_seq}"
 
 def format_timestamp() -> str:
-    """Returns formatted inspection timestamp."""
-    return datetime.now().strftime("%d-%m-%Y %H:%M:%S IST")
+    """Returns ISO-formatted inspection timestamp for universal cross-platform parsing."""
+    return datetime.now().isoformat()
 
 def sanitize_filename(name: str) -> str:
     """Sanitizes filename for safe storage."""

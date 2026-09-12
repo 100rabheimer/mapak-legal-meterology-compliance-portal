@@ -63,6 +63,12 @@ class Inspection(Base):
     status = Column(String(50), nullable=False) # PASS, VIOLATION DETECTED, WARNING
     is_compliant = Column(Boolean, default=False)
     compliance_score = Column(Integer, default=0)
+    net_quantity = Column(String(100), nullable=True)
+    mrp = Column(String(100), nullable=True)
+    mfg_date = Column(String(100), nullable=True)
+    consumer_care = Column(String(200), nullable=True)
+    country_of_origin = Column(String(100), nullable=True)
+    raw_ocr_json = Column(Text, nullable=True)
     
     officer_id = Column(Integer, ForeignKey("users.id"), nullable=True)
     officer = relationship("User", back_populates="inspections")

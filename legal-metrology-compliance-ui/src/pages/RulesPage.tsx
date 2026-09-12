@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { fetchMasterRules } from "../services/apiClient";
+import { fetchMasterRules, addMasterRule } from "../services/apiClient";
+import { useAuthStore } from "../stores/authStores";
 import {
   BookOpen,
   Search,
@@ -10,7 +11,8 @@ import {
   ShieldCheck,
   Tag,
   ExternalLink,
-  RefreshCw
+  RefreshCw,
+  Plus
 } from "lucide-react";
 
 interface Rule {
@@ -27,11 +29,23 @@ interface Rule {
 }
 
 export const RulesPage: React.FC = () => {
+  const { user } = useAuthStore();
   const [rules, setRules] = useState<Rule[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [categoryFilter, setCategoryFilter] = useState<string>("ALL");
   const [selectedRule, setSelectedRule] = useState<Rule | null>(null);
+
+  const [isAddingRule, setIsAddingRule] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [newRule, setNewRule] = useState({
+    rule_id: "",
+    clause: "",
+    title: "",
+    category: "MANDATORY DECLARATION",
+    text: "",
+    mandatory: true,
+  });
 
   const loadRules = async () => {
     setLoading(true);
@@ -42,6 +56,34 @@ export const RulesPage: React.FC = () => {
       console.error("Failed to load rules", err);
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handleAddRuleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    try {
+      // Auto-generate ID if empty
+      const payload = {
+        ...newRule,
+        rule_id: newRule.rule_id || `RULE-NEW-${Math.floor(Math.random() * 10000)}`,
+      };
+      await addMasterRule(payload);
+      await loadRules();
+      setIsAddingRule(false);
+      setNewRule({
+        rule_id: "",
+        clause: "",
+        title: "",
+        category: "MANDATORY DECLARATION",
+        text: "",
+        mandatory: true,
+      });
+    } catch (err) {
+      console.error("Failed to add rule", err);
+      alert("Failed to add rule.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -87,14 +129,25 @@ export const RulesPage: React.FC = () => {
               Official 49 statutory rules under Legal Metrology (Packaged Commodities) Rules, 2011 & Amendments, synthesized into Module 1 Knowledge Base.
             </p>
           </div>
-          <button
-            onClick={loadRules}
-            disabled={loading}
-            className="flex items-center gap-2 px-4 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white font-medium rounded-xl transition-all shadow-md active:scale-95 disabled:opacity-50"
-          >
-            <RefreshCw className={`w-4 h-4 ${loading ? "animate-spin" : ""}`} />
-            Refresh Rules
-          </button>
+          <div className="flex items-center gap-3">
+            {user?.role === "admin" && (
+              <button
+                onClick={() => setIsAddingRule(true)}
+                className="flex items-center gap-2 px-4 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-medium rounded-xl transition-all shadow-md active:scale-95"
+              >
+                <Plus className="w-4 h-4" />
+                Add New Rule
+              </button>
+            )}
+            <button
+              onClick={loadRules}
+              disabled={loading}
+              className="flex items-center gap-2 px-4 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white font-medium rounded-xl transition-all shadow-md active:scale-95 disabled:opacity-50"
+            >
+              <RefreshCw className={`w-4 h-4 ${loading ? "animate-spin" : ""}`} />
+              Refresh Rules
+            </button>
+          </div>
         </div>
       </div>
 
@@ -259,6 +312,89 @@ export const RulesPage: React.FC = () => {
                 Close Rule Inspector
               </button>
             </div>
+          </div>
+        </div>
+      )}
+
+      {/* Add New Rule Modal */}
+      {isAddingRule && (
+        <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl max-w-2xl w-full p-6 shadow-2xl">
+            <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-4">Add New Statutory Rule</h2>
+            <form onSubmit={handleAddRuleSubmit} className="space-y-4">
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1">Clause (e.g. Rule 6(1))</label>
+                  <input
+                    required
+                    type="text"
+                    value={newRule.clause}
+                    onChange={(e) => setNewRule({ ...newRule, clause: e.target.value })}
+                    className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 dark:text-white"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1">Category</label>
+                  <select
+                    value={newRule.category}
+                    onChange={(e) => setNewRule({ ...newRule, category: e.target.value })}
+                    className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 dark:text-white"
+                  >
+                    <option value="MANDATORY DECLARATION">Mandatory Declaration</option>
+                    <option value="SPECIAL PROVISION">Special Provision</option>
+                    <option value="GENERAL">General</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1">Rule Title</label>
+                <input
+                  required
+                  type="text"
+                  value={newRule.title}
+                  onChange={(e) => setNewRule({ ...newRule, title: e.target.value })}
+                  className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 dark:text-white"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1">Statutory Text</label>
+                <textarea
+                  required
+                  rows={4}
+                  value={newRule.text}
+                  onChange={(e) => setNewRule({ ...newRule, text: e.target.value })}
+                  className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 dark:text-white resize-none"
+                ></textarea>
+              </div>
+              <div className="flex items-center gap-2">
+                <input
+                  type="checkbox"
+                  id="mandatoryCheck"
+                  checked={newRule.mandatory}
+                  onChange={(e) => setNewRule({ ...newRule, mandatory: e.target.checked })}
+                  className="w-4 h-4 text-emerald-600 rounded border-slate-300 focus:ring-emerald-500"
+                />
+                <label htmlFor="mandatoryCheck" className="text-sm font-medium text-slate-700 dark:text-slate-300">
+                  This is a mandatory requirement
+                </label>
+              </div>
+              <div className="pt-4 border-t border-slate-200 dark:border-slate-800 flex justify-end gap-3">
+                <button
+                  type="button"
+                  onClick={() => setIsAddingRule(false)}
+                  className="px-5 py-2 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-xl text-sm font-medium hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="px-5 py-2 bg-emerald-600 text-white rounded-xl text-sm font-medium hover:bg-emerald-500 transition-colors disabled:opacity-50"
+                >
+                  {isSubmitting ? "Saving..." : "Save Rule to KB"}
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       )}

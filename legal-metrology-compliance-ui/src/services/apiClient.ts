@@ -194,11 +194,11 @@ export async function inspectPackageApi(
         remedy: v.remedy,
       })),
       entity_info: {
-        commodity_name: productName || "Herbal Shampoo 180 ml",
-        manufacturer_name_address: companyName || "GreenCare Pvt. Ltd.",
-        mrp: "₹199.00",
-        mfg_date: "Aug 2026",
-        net_quantity: "180 gms",
+        commodity_name: productName || "Scanned Pre-Packaged Commodity",
+        manufacturer_name_address: companyName || "Enterprise Manufacturer / Packer",
+        mrp: "Not Detected",
+        mfg_date: "Not Detected",
+        net_quantity: "Not Detected",
       },
       penalty_info: {
         applicable: true,
@@ -276,15 +276,79 @@ export async function fetchAnalyticsStats(): Promise<any> {
   }
 }
 
+import rulesData from "../data/rules_knowledge_base.json";
+
 export async function fetchMasterRules(): Promise<any[]> {
   try {
     const res = await fetch(`${API_BASE_URL}/api/v1/rules`);
     if (!res.ok) throw new Error("Failed to fetch rules");
     const data = await res.json();
-    return data.rules || [];
+    
+    // If backend returns empty rules, fallback to local
+    if (!data.rules || data.rules.length === 0) {
+      throw new Error("Empty rules from backend");
+    }
+    
+    return data.rules;
   } catch (err) {
-    return [];
+    console.warn("Backend failed to load rules. Using local static KB.", err);
+    
+    // Flatten the rules_knowledge_base.json into an array of Rule objects
+    const localRules: any[] = [];
+    
+    if (rulesData.mandatoryDeclarations) {
+      rulesData.mandatoryDeclarations.forEach((r: any) => {
+        localRules.push({
+          rule_id: r.id,
+          clause: r.ruleNumber,
+          title: r.title,
+          category: "MANDATORY DECLARATION",
+          text: r.description,
+          mandatory: r.required
+        });
+      });
+    }
+    
+    if (rulesData.specialIndustryProvisions) {
+      rulesData.specialIndustryProvisions.forEach((r: any) => {
+        localRules.push({
+          rule_id: r.id,
+          clause: r.ruleNumber || r.id,
+          title: r.title || r.industry,
+          category: "SPECIAL PROVISION",
+          text: r.description || JSON.stringify(r.exemptions || r.rules)
+        });
+      });
+    }
+
+    if (rulesData.rule11MetricUnits) {
+       localRules.push({
+          rule_id: "RULE-11",
+          clause: "Rule 11",
+          title: "Standard Metric Units",
+          category: "GENERAL",
+          text: "Standard units of weight, measure or number must be used."
+       });
+    }
+
+    return localRules;
   }
+}
+
+export async function addMasterRule(rule: any): Promise<any> {
+  const res = await fetch(`${API_BASE_URL}/api/v1/rules`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      ...getAuthHeader(),
+    },
+    body: JSON.stringify(rule),
+  });
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({ detail: "Failed to add rule" }));
+    throw new Error(err.detail || "Failed to add rule");
+  }
+  return await res.json();
 }
 
 export async function fetchOfficersApi(): Promise<UserProfile[]> {

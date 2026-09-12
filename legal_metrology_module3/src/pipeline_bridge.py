@@ -175,10 +175,6 @@ class InspectionPipelineBridge:
 
         panel_results = []
         all_violations = []
-        all_compliant = set()
-        all_non_compliant = set()
-        merged_entity_info = {}
-
         panel_names = ["Front PDP", "Back Panel", "Side Label", "Outer Carton / Tag"]
 
         for idx, img_path in enumerate(image_paths):
@@ -188,18 +184,9 @@ class InspectionPipelineBridge:
                 single_res["panel_name"] = p_name
                 panel_results.append(single_res)
 
-                # Merge violations
+                # Collect all raw violations from all panels
                 for v in single_res.get("violations", []):
-                    if v not in all_violations:
-                        all_violations.append(v)
-
-                all_compliant.update(single_res.get("compliant_fields", []))
-                all_non_compliant.update(single_res.get("non_compliant_fields", []))
-
-                # Merge entity info
-                for k, val in single_res.get("entity_info", {}).items():
-                    if val and val != "N/A" and val != "Undisclosed":
-                        merged_entity_info[k] = val
+                    all_violations.append(v)
             except Exception as err:
                 print(f"[InspectionPipelineBridge] Error processing panel image {img_path}: {err}")
 
@@ -207,10 +194,92 @@ class InspectionPipelineBridge:
             raise RuntimeError("Failed to process any of the provided packaging scan images.")
 
         primary = panel_results[0]
-        is_compliant = len(all_violations) == 0
-        comp_score = max(0, 100 - len(all_violations) * 15)
 
-        # Build panels payload
+        # Merge extracted OCR fields across ALL scanned panels
+        merged_fields = {}
+        merged_raw_text = []
+        merged_entity_info = {}
+
+        for pr in panel_results:
+            # Aggregate entity info
+            for k, val in pr.get("entity_info", {}).items():
+                if val and val not in ["Not Specified", "N/A", "Undisclosed", "Pre-Packaged Commodity (Unidentified Generic Name)"]:
+                    merged_entity_info[k] = val
+                elif k not in merged_entity_info:
+                    merged_entity_info[k] = val
+
+            # Aggregate OCR fields and bounding boxes
+            ocr_f = pr.get("ocr_raw", {}).get("fields", {})
+            for fk, fdata in ocr_f.items():
+                if fdata.get("present") and fdata.get("text"):
+                    if fk not in merged_fields or not merged_fields[fk].get("present"):
+                        merged_fields[fk] = fdata
+                    elif not merged_fields[fk].get("bbox_pixel") and fdata.get("bbox_pixel"):
+                        merged_fields[fk]["bbox_pixel"] = fdata.get("bbox_pixel")
+                elif fk not in merged_fields:
+                    merged_fields[fk] = fdata
+
+            raw_t = pr.get("ocr_raw", {}).get("raw_text")
+            if raw_t:
+                merged_raw_text.append(raw_t)
+
+        # Fallback missing entity info from merged_fields text
+        if "generic_name" in merged_fields and merged_fields["generic_name"].get("text"):
+            merged_entity_info["commodity_name"] = merged_fields["generic_name"]["text"]
+        if "manufacturer_details" in merged_fields and merged_fields["manufacturer_details"].get("text"):
+            merged_entity_info["manufacturer_name_address"] = merged_fields["manufacturer_details"]["text"]
+        if "net_quantity" in merged_fields and merged_fields["net_quantity"].get("text"):
+            merged_entity_info["net_quantity"] = merged_fields["net_quantity"]["text"]
+        if "mrp" in merged_fields and merged_fields["mrp"].get("text"):
+            merged_entity_info["mrp"] = merged_fields["mrp"]["text"]
+        if "mfg_date" in merged_fields and merged_fields["mfg_date"].get("text"):
+            merged_entity_info["mfg_date"] = merged_fields["mfg_date"]["text"]
+
+        # Cross-panel Violation Reconciliation:
+        # A mandatory field is NOT missing if it was detected on ANY panel!
+        reconciled_violations = []
+        for v in all_violations:
+            fk = v.get("field")
+            # If it was flagged as missing mandatory declaration, check if present on another panel
+            if v.get("rule_id") == "RULE_6_MANDATORY":
+                if fk in merged_fields and merged_fields[fk].get("present") and merged_fields[fk].get("text"):
+                    continue  # Found on another packaging panel!
+
+            # Avoid duplicate violation entries in report
+            if not any(rv.get("rule_id") == v.get("rule_id") and rv.get("field") == v.get("field") and rv.get("title") == v.get("title") for rv in reconciled_violations):
+                reconciled_violations.append(v)
+
+        MANDATORY_KEYS = [
+            "manufacturer_details", "generic_name", "net_quantity", "mfg_date",
+            "mrp", "usp", "customer_care", "country_of_origin"
+        ]
+
+        all_compliant_fields = []
+        all_non_compliant_fields = []
+
+        for mk in MANDATORY_KEYS:
+            has_viol = any(rv.get("field") == mk for rv in reconciled_violations)
+            is_present = merged_fields.get(mk, {}).get("present", False) and bool(merged_fields.get(mk, {}).get("text"))
+            if is_present and not has_viol:
+                all_compliant_fields.append(mk)
+            else:
+                all_non_compliant_fields.append(mk)
+
+        # Accurate Dynamic Compliance Score based on verified declarations
+        total_mandatory = len(MANDATORY_KEYS)
+        compliant_count = len(all_compliant_fields)
+        statutory_defects = [v for v in reconciled_violations if v.get("rule_id") in ["RULE_11_UNITS", "RULE_7_FONT", "RULE_6_1_E_TAXES", "RULE_6_1_E_CURRENCY"]]
+        defect_penalty = len(statutory_defects) * 5.0
+
+        base_score = (compliant_count / float(total_mandatory)) * 100.0
+        comp_score = max(0, min(100, int(round(base_score - defect_penalty))))
+        if len(reconciled_violations) == 0:
+            comp_score = 100
+        elif comp_score >= 100:
+            comp_score = 95
+        is_compliant = len(reconciled_violations) == 0
+
+        # Build panels payload with fields and bounding boxes
         panels_payload = []
         for idx, pr in enumerate(panel_results):
             art = pr.get("artifacts", {})
@@ -222,30 +291,35 @@ class InspectionPipelineBridge:
                 "pdp_area_cm2": pr.get("pdp_summary", {}).get("pdp_area_cm2", 85.5),
                 "scale_k": pr.get("pdp_summary", {}).get("scale_k", 0.125),
                 "violations": pr.get("violations", []),
-                "compliant_fields": pr.get("compliant_fields", [])
+                "compliant_fields": pr.get("compliant_fields", []),
+                "fields": pr.get("ocr_raw", {}).get("fields", {})
             })
 
         final_result = {
-            "status": "COMPLIANT" if is_compliant else "NON_COMPLIANT",
+            "status": "PASS" if is_compliant else "NON-COMPLIANT / VIOLATION DETECTED",
             "is_compliant": is_compliant,
             "compliance_score": comp_score,
             "category": category,
             "timestamp": format_timestamp(),
             "summary": {
-                "total_mandatory_fields_checked": 8,
-                "compliant_fields_count": len(all_compliant),
-                "non_compliant_fields_count": len(all_non_compliant),
-                "total_violations_found": len(all_violations),
+                "total_mandatory_fields_checked": total_mandatory,
+                "compliant_fields_count": len(all_compliant_fields),
+                "non_compliant_fields_count": len(all_non_compliant_fields),
+                "total_violations_found": len(reconciled_violations),
             },
-            "compliant_fields": list(all_compliant),
-            "non_compliant_fields": list(all_non_compliant),
-            "violations": all_violations,
+            "compliant_fields": all_compliant_fields,
+            "non_compliant_fields": all_non_compliant_fields,
+            "violations": reconciled_violations,
             "entity_info": merged_entity_info if merged_entity_info else primary.get("entity_info", {}),
-            "penalty_info": calculate_statutory_penalty(all_violations),
+            "penalty_info": calculate_statutory_penalty(reconciled_violations),
             "font_verification": primary.get("font_verification"),
             "pdp_summary": primary.get("pdp_summary"),
             "artifacts": primary.get("artifacts", {}),
-            "panels": panels_payload
+            "panels": panels_payload,
+            "ocr_raw": {
+                "fields": merged_fields,
+                "raw_text": "\n".join(merged_raw_text)
+            }
         }
 
         return final_result

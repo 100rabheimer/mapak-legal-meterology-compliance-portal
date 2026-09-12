@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { AlertTriangle, ArrowRight, CheckCircle2, Edit3, Eye, Layers, Ruler, ScanLine } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import { runVisionInspectionPipeline } from "../services/visionAiService";
 import { getActiveInspection } from "../services/apiClient";
 
 export function ReviewPage() {
@@ -16,12 +15,6 @@ export function ReviewPage() {
   if (rawImgUrl && !rawImgUrl.startsWith("http")) {
     rawImgUrl = `${API_BASE_URL}${rawImgUrl}`;
   }
-
-  const record = runVisionInspectionPipeline(
-    activeReport?.entity_info?.commodity_name || "Herbal Shampoo 180 ml",
-    activeReport?.entity_info?.manufacturer_name_address || "GreenCare Pvt. Ltd.",
-    rawImgUrl ? [rawImgUrl] : []
-  );
 
   // Parse panels dynamically from backend activeReport.panels if available
   const uiPanels = (activeReport?.panels && activeReport.panels.length > 0)
@@ -56,71 +49,107 @@ export function ReviewPage() {
   const activePanel = uiPanels[activePanelIndex] || uiPanels[0];
   const activeDisplayUrl = viewMode === "annotated" ? activePanel.annotatedUrl : activePanel.originalUrl;
 
+  const ocrFields = activeReport?.ocr_raw?.fields || {};
+  const entity = activeReport?.entity_info || {};
+
+  const fontMeasured = Number(activeReport?.font_verification?.measured_font_height_mm ?? 2.34);
+  const fontRequired = Number(activeReport?.font_verification?.statutory_min_height_mm ?? 2.0);
+  const isFontOk = fontMeasured >= (fontRequired - 0.05);
+
+  const hasViolation = (fieldKey: string, rulePattern?: string) => {
+    return activeReport?.violations?.some((v: any) => 
+      v.field === fieldKey || 
+      (rulePattern && (v.rule_id?.toLowerCase().includes(rulePattern.toLowerCase()) || v.title?.toLowerCase().includes(rulePattern.toLowerCase())))
+    );
+  };
+
+  const isDetected = (fieldKey: string, val?: string) => {
+    if (val && val !== "Not Detected on Packaging PDP" && val !== "Not Detected" && val !== "Not Specified") return true;
+    const f = ocrFields[fieldKey];
+    return Boolean(f && (f.present || f.text));
+  };
+
+  const hasUnitViolation = hasViolation("net_quantity", "RULE_11_UNITS") || hasViolation("net_quantity", "unit");
+  const netQtyDetected = isDetected("net_quantity", entity.net_quantity || ocrFields.net_quantity?.text);
+  const netQtyCompliant = netQtyDetected && isFontOk && !hasUnitViolation;
+
   const extractedDeclarations = [
     {
       id: "decl-1",
       fieldLabel: "Product Name / Commodity",
-      extractedValue: activeReport?.entity_info?.commodity_name || "Herbal Shampoo 180 ml",
-      confidence: 99,
+      extractedValue: entity.commodity_name || ocrFields.generic_name?.text || "Not Detected on Packaging PDP",
+      confidence: Math.round((ocrFields.generic_name?.confidence || 0.95) * 100),
       measuredFontHeightMm: 5.2,
       requiredMinFontHeightMm: 2.5,
-      status: "compliant"
+      status: isDetected("generic_name", entity.commodity_name || ocrFields.generic_name?.text) && !hasViolation("generic_name", "generic") ? "compliant" : "violation"
     },
     {
       id: "decl-2",
       fieldLabel: "Net Quantity",
-      extractedValue: activeReport?.entity_info?.net_quantity || "180 gms",
-      confidence: 97,
-      measuredFontHeightMm: activeReport?.font_verification?.measured_font_height_mm || 1.8,
-      requiredMinFontHeightMm: activeReport?.font_verification?.statutory_min_height_mm || 2.0,
-      status: activeReport?.font_verification?.is_compliant === false ? "violation" : "compliant",
-      violationMessage: activeReport?.font_verification?.is_compliant === false ? "Rule 7 Font Height Violation (1.8mm < 2.0mm required)" : undefined
+      extractedValue: entity.net_quantity || ocrFields.net_quantity?.text || "Not Detected on Packaging PDP",
+      confidence: Math.round((ocrFields.net_quantity?.confidence || 0.95) * 100),
+      measuredFontHeightMm: fontMeasured,
+      requiredMinFontHeightMm: fontRequired,
+      status: netQtyCompliant ? "compliant" : "violation",
+      violationMessage: !isFontOk 
+        ? `Rule 7 Font Height Violation (${fontMeasured}mm < ${fontRequired}mm required)` 
+        : (hasUnitViolation ? "Rule 11 Unit Symbol Violation" : undefined)
     },
     {
       id: "decl-3",
       fieldLabel: "Maximum Retail Price (MRP)",
-      extractedValue: activeReport?.entity_info?.mrp || "₹199.00",
-      confidence: 94,
+      extractedValue: entity.mrp || ocrFields.mrp?.text || "Not Detected on Packaging PDP",
+      confidence: Math.round((ocrFields.mrp?.confidence || 0.94) * 100),
       measuredFontHeightMm: 3.5,
       requiredMinFontHeightMm: 2.5,
-      status: activeReport?.violations?.some((v: any) => v.title?.includes("MRP") || v.clause?.includes("6(1)(e)")) ? "violation" : "compliant",
-      violationMessage: activeReport?.violations?.find((v: any) => v.title?.includes("MRP") || v.clause?.includes("6(1)(e)"))?.description
+      status: isDetected("mrp", entity.mrp || ocrFields.mrp?.text) && !hasViolation("mrp", "mrp") ? "compliant" : "violation",
+      violationMessage: activeReport?.violations?.find((v: any) => v.field === "mrp" || v.title?.toLowerCase().includes("mrp"))?.description
     },
     {
       id: "decl-4",
-      fieldLabel: "Manufacturer / Packer Address",
-      extractedValue: activeReport?.entity_info?.manufacturer_name_address || "GreenCare Pvt. Ltd., Mumbai - 400093",
-      confidence: 92,
-      measuredFontHeightMm: 2.6,
+      fieldLabel: "Unit Sale Price (USP)",
+      extractedValue: ocrFields.usp?.text || entity.usp || "Not Detected on Packaging PDP",
+      confidence: Math.round((ocrFields.usp?.confidence || 0.90) * 100),
+      measuredFontHeightMm: 2.4,
       requiredMinFontHeightMm: 1.5,
-      status: "compliant"
+      status: isDetected("usp", ocrFields.usp?.text || entity.usp) && !hasViolation("usp", "usp") ? "compliant" : "violation",
+      violationMessage: activeReport?.violations?.find((v: any) => v.field === "usp")?.description
     },
     {
       id: "decl-5",
-      fieldLabel: "Month and Year of Packing",
-      extractedValue: activeReport?.entity_info?.mfg_date || "Aug 2026",
-      confidence: 91,
-      measuredFontHeightMm: 2.2,
+      fieldLabel: "Manufacturer / Packer Address",
+      extractedValue: entity.manufacturer_name_address || ocrFields.manufacturer_details?.text || "Not Detected on Packaging PDP",
+      confidence: Math.round((ocrFields.manufacturer_details?.confidence || 0.92) * 100),
+      measuredFontHeightMm: 2.6,
       requiredMinFontHeightMm: 1.5,
-      status: "compliant"
+      status: isDetected("manufacturer_details", entity.manufacturer_name_address || ocrFields.manufacturer_details?.text) && !hasViolation("manufacturer_details", "manufacturer") ? "compliant" : "violation"
     },
     {
       id: "decl-6",
-      fieldLabel: "Consumer Care Contact Details",
-      extractedValue: activeReport?.entity_info?.consumer_care || "1800-11-4000 / care@manufacturer.in",
-      confidence: 95,
-      measuredFontHeightMm: 2.0,
+      fieldLabel: "Month and Year of Packing",
+      extractedValue: entity.mfg_date || ocrFields.mfg_date?.text || "Not Detected on Packaging PDP",
+      confidence: Math.round((ocrFields.mfg_date?.confidence || 0.91) * 100),
+      measuredFontHeightMm: 2.2,
       requiredMinFontHeightMm: 1.5,
-      status: "compliant"
+      status: isDetected("mfg_date", entity.mfg_date || ocrFields.mfg_date?.text) && !hasViolation("mfg_date", "mfg_date") ? "compliant" : "violation"
     },
     {
       id: "decl-7",
-      fieldLabel: "Country of Origin",
-      extractedValue: activeReport?.entity_info?.country_of_origin || "Country of Origin: India",
-      confidence: 98,
+      fieldLabel: "Consumer Care Contact Details",
+      extractedValue: entity.consumer_care || ocrFields.customer_care?.text || "Not Detected on Packaging PDP",
+      confidence: Math.round((ocrFields.customer_care?.confidence || 0.95) * 100),
       measuredFontHeightMm: 2.0,
       requiredMinFontHeightMm: 1.5,
-      status: "compliant"
+      status: isDetected("customer_care", entity.consumer_care || ocrFields.customer_care?.text) && !hasViolation("customer_care", "customer") ? "compliant" : "violation"
+    },
+    {
+      id: "decl-8",
+      fieldLabel: "Country of Origin",
+      extractedValue: entity.country_of_origin || ocrFields.country_of_origin?.text || "Not Detected on Packaging PDP",
+      confidence: Math.round((ocrFields.country_of_origin?.confidence || 0.98) * 100),
+      measuredFontHeightMm: 2.0,
+      requiredMinFontHeightMm: 1.5,
+      status: isDetected("country_of_origin", entity.country_of_origin || ocrFields.country_of_origin?.text) && !hasViolation("country_of_origin", "country") ? "compliant" : "violation"
     }
   ];
 
@@ -132,7 +161,7 @@ export function ReviewPage() {
             <span className="rounded-md bg-blue-100 px-2.5 py-0.5 text-xs font-semibold text-blue-700">
               Module 2: Multimodal Vision AI Pipeline
             </span>
-            <p className="text-xs text-slate-500">Inspection {activeReport?.inspection_id || record.inspectionNumber}</p>
+            <p className="text-xs text-slate-500">Inspection {activeReport?.inspection_id}</p>
           </div>
 
           <h1 className="page-title mt-1">Packaging Vision AI Review</h1>

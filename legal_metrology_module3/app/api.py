@@ -437,6 +437,9 @@ async def inspect_package(
         insp_id_str = f"INS-2026-{uuid.uuid4().hex[:6].upper()}"
         report["inspection_id"] = insp_id_str
 
+        entity = report.get("entity_info", {})
+        ocr_fields = report.get("ocr_raw", {}).get("fields", {})
+
         db_inspection = Inspection(
             inspection_id=insp_id_str,
             timestamp=report.get("timestamp", datetime.now().isoformat()),
@@ -446,6 +449,12 @@ async def inspect_package(
             status=report.get("status", "UNKNOWN"),
             is_compliant=report.get("is_compliant", False),
             compliance_score=int(report.get("compliance_score", 0)),
+            net_quantity=entity.get("net_quantity") or ocr_fields.get("net_quantity", {}).get("text"),
+            mrp=entity.get("mrp") or ocr_fields.get("mrp", {}).get("text"),
+            mfg_date=entity.get("mfg_date") or ocr_fields.get("mfg_date", {}).get("text"),
+            consumer_care=entity.get("consumer_care") or ocr_fields.get("customer_care", {}).get("text"),
+            country_of_origin=entity.get("country_of_origin") or ocr_fields.get("country_of_origin", {}).get("text"),
+            raw_ocr_json=json.dumps(report.get("ocr_raw", {})),
             officer_id=current_user.id if current_user else None
         )
         db.add(db_inspection)
@@ -462,6 +471,21 @@ async def inspect_package(
                 scale_ratio_k=float(p.get("scale_k", 0.125))
             )
             db.add(db_panel)
+
+        # Add extracted declarations with real bounding boxes
+        for fk, fdata in ocr_fields.items():
+            if isinstance(fdata, dict):
+                bbox = fdata.get("bbox_pixel")
+                db_decl = ExtractedDeclaration(
+                    inspection_id=db_inspection.id,
+                    field_key=fk,
+                    field_name=fk.replace("_", " ").title(),
+                    extracted_value=fdata.get("text"),
+                    confidence=float(fdata.get("confidence", 0.90)) * 100 if fdata.get("confidence", 0.90) <= 1.0 else float(fdata.get("confidence", 90.0)),
+                    bbox_json=json.dumps(bbox) if bbox else None,
+                    is_compliant=fk in report.get("compliant_fields", [])
+                )
+                db.add(db_decl)
 
         # Add violations
         for v in report.get("violations", []):
@@ -525,6 +549,21 @@ def get_inspections(
 
     results = []
     for r in rows:
+        # Resolve real extracted declaration values
+        net_q = r.net_quantity or "Not Detected"
+        price_val = r.mrp or "Not Detected"
+        mfg_d = r.mfg_date or "Not Detected"
+        
+        # Check declarations relationship if direct columns are not populated
+        if (net_q == "Not Detected" or price_val == "Not Detected") and r.declarations:
+            for d in r.declarations:
+                if d.field_key == "net_quantity" and d.extracted_value:
+                    net_q = d.extracted_value
+                elif d.field_key == "mrp" and d.extracted_value:
+                    price_val = d.extracted_value
+                elif d.field_key == "mfg_date" and d.extracted_value:
+                    mfg_d = d.extracted_value
+
         results.append({
             "inspection_id": r.inspection_id,
             "timestamp": r.timestamp,
@@ -535,7 +574,16 @@ def get_inspections(
             "is_compliant": r.is_compliant,
             "compliance_score": r.compliance_score,
             "violations_count": len(r.violations),
-            "notice_url": r.legal_notices[0].pdf_url if r.legal_notices else "/api/download_latest_notice"
+            "notice_url": r.legal_notices[0].pdf_url if r.legal_notices else "/api/download_latest_notice",
+            "entity_info": {
+                "commodity_name": r.product_name,
+                "manufacturer_name_address": r.company_name,
+                "net_quantity": net_q,
+                "mrp": price_val,
+                "mfg_date": mfg_d,
+                "consumer_care": r.consumer_care or "Not Specified",
+                "country_of_origin": r.country_of_origin or "Not Specified"
+            }
         })
     return results
 
@@ -596,18 +644,96 @@ def get_analytics(db: Session = Depends(get_db)):
 def get_master_rules(category: Optional[str] = Query(None)):
     """Queries 49 statutory master legal rules synthesized from Module 1 Knowledge Base."""
     rules_kb_path = os.path.join(os.path.dirname(base_dir), "legal_metrology_compliance", "output", "rules_knowledge_base.json")
+    ui_kb_path = os.path.join(os.path.dirname(base_dir), "legal-metrology-compliance-ui", "src", "data", "rules_knowledge_base.json")
+    
     if not os.path.exists(rules_kb_path):
-        return {"rules": [], "count": 0, "message": "Rules KB file not found."}
+        if os.path.exists(ui_kb_path):
+            rules_kb_path = ui_kb_path
+        else:
+            return {"rules": [], "count": 0, "message": "Rules KB file not found."}
 
     try:
         with open(rules_kb_path, "r", encoding="utf-8") as f:
             kb_data = json.load(f)
-        rules_list = list(kb_data.values()) if isinstance(kb_data, dict) else kb_data
+            
+        rules_list = []
+        if isinstance(kb_data, dict):
+            # Try to flatten structure like we did in frontend
+            if "mandatoryDeclarations" in kb_data:
+                for r in kb_data["mandatoryDeclarations"]:
+                    rules_list.append({
+                        "rule_id": r.get("id"),
+                        "clause": r.get("ruleNumber"),
+                        "title": r.get("title"),
+                        "category": "MANDATORY DECLARATION",
+                        "text": r.get("description"),
+                        "mandatory": r.get("required")
+                    })
+            if "specialIndustryProvisions" in kb_data:
+                for r in kb_data["specialIndustryProvisions"]:
+                    rules_list.append({
+                        "rule_id": r.get("id"),
+                        "clause": r.get("ruleNumber", r.get("id")),
+                        "title": r.get("title", r.get("industry")),
+                        "category": "SPECIAL PROVISION",
+                        "text": r.get("description", str(r.get("exemptions", "")))
+                    })
+            # If flat list somehow
+            if not rules_list:
+                rules_list = list(kb_data.values())
+        else:
+            rules_list = kb_data
         if category:
             rules_list = [r for r in rules_list if isinstance(r, dict) and category.lower() in r.get("category", "").lower()]
         return {"rules": rules_list, "count": len(rules_list)}
     except Exception as e:
         return {"rules": [], "count": 0, "error": str(e)}
+
+@app.post("/api/v1/rules")
+def add_master_rule(
+    rule: RuleModel,
+    db: Session = Depends(get_db),
+    admin_user: User = Depends(require_admin)
+):
+    """Adds a new statutory rule to the Knowledge Base (Admin restricted)."""
+    rules_kb_path = os.path.join(os.path.dirname(base_dir), "legal_metrology_compliance", "output", "rules_knowledge_base.json")
+    ui_kb_path = os.path.join(os.path.dirname(base_dir), "legal-metrology-compliance-ui", "src", "data", "rules_knowledge_base.json")
+    
+    target_path = None
+    if os.path.exists(ui_kb_path):
+        target_path = ui_kb_path
+    elif os.path.exists(rules_kb_path):
+        target_path = rules_kb_path
+    else:
+        raise HTTPException(status_code=500, detail="Rules KB file not found to update.")
+
+    try:
+        with open(target_path, "r", encoding="utf-8") as f:
+            kb_data = json.load(f)
+            
+        new_rule_dict = {
+            "id": rule.rule_id,
+            "ruleNumber": rule.clause,
+            "title": rule.title,
+            "description": rule.text,
+            "required": rule.mandatory,
+            "category": rule.category
+        }
+        
+        if isinstance(kb_data, dict):
+            if "mandatoryDeclarations" not in kb_data:
+                kb_data["mandatoryDeclarations"] = []
+            kb_data["mandatoryDeclarations"].append(new_rule_dict)
+            kb_data["totalMasterRules"] = kb_data.get("totalMasterRules", 0) + 1
+        else:
+            raise HTTPException(status_code=500, detail="Invalid KB format. Cannot append.")
+
+        with open(target_path, "w", encoding="utf-8") as f:
+            json.dump(kb_data, f, indent=2)
+            
+        return {"success": True, "message": "Rule added successfully", "rule": new_rule_dict}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to save rule: {str(e)}")
 
 # -------------------------------------------------------------------
 # REAL-TIME SSE PROGRESS STREAMING

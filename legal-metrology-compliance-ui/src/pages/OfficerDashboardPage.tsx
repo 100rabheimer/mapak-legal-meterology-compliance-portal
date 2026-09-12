@@ -138,7 +138,7 @@ export function OfficerDashboardPage() {
 
           <div className="overflow-x-auto">
             <table className="min-w-full text-left">
-              <thead className="bg-slate-50 text-xs font-semibold uppercase tracking-wide text-slate-500">
+              <thead className="bg-slate-50 dark:bg-slate-800 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
                 <tr>
                   <th className="px-6 py-4">Inspection</th>
                   <th className="px-6 py-4">Product</th>
@@ -147,7 +147,7 @@ export function OfficerDashboardPage() {
                 </tr>
               </thead>
 
-              <tbody className="divide-y divide-slate-100">
+              <tbody className="divide-y divide-slate-100 dark:divide-slate-800/50">
                 {(recentInspections && recentInspections.length > 0 ? recentInspections : [
                   {
                     inspection_id: "INS-2026-8801",
@@ -164,22 +164,22 @@ export function OfficerDashboardPage() {
                     is_compliant: true
                   }
                 ]).map((inspection, idx) => (
-                  <tr key={inspection.inspection_id || idx} className="hover:bg-slate-50">
-                    <td className="px-6 py-4 text-sm font-semibold text-blue-600 font-mono">
+                  <tr key={inspection.inspection_id || idx} className="hover:bg-slate-50 dark:hover:bg-slate-800/50">
+                    <td className="px-6 py-4 text-sm font-semibold text-blue-600 dark:text-blue-400 font-mono">
                       {inspection.inspection_id || `INS-2026-880${idx + 1}`}
                     </td>
 
                     <td className="px-6 py-4">
-                      <p className="text-sm font-medium text-slate-800">
+                      <p className="text-sm font-medium text-slate-800 dark:text-slate-200">
                         {inspection.entity_info?.commodity_name || inspection.product_name || "Pre-Packaged Goods"}
                       </p>
 
-                      <p className="mt-1 text-xs text-slate-500">
+                      <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">
                         {inspection.timestamp ? new Date(inspection.timestamp).toLocaleDateString() : "Recent"}
                       </p>
                     </td>
 
-                    <td className="px-6 py-4 text-sm text-slate-600">
+                    <td className="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">
                       {inspection.entity_info?.manufacturer_name_address || inspection.company_name || "Northern Zone"}
                     </td>
 

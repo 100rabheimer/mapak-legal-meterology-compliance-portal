@@ -84,14 +84,12 @@ export function LoginPage() {
     <div className="min-h-screen bg-slate-50">
       <div className="grid min-h-screen lg:grid-cols-2">
         <section className="hidden bg-linear-to-br from-blue-700 via-blue-600 to-indigo-700 p-12 text-white lg:flex lg:flex-col lg:justify-between">
-          <div className="flex items-center gap-3">
-            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/15">
-              <ShieldCheck className="h-6 w-6" />
-            </div>
+          <div className="flex items-center gap-4">
+            <img src="/src/assets/mapak-logo.png" alt="MAPAK Logo" className="h-16 w-16 object-contain brightness-0 invert" />
 
             <div>
-              <p className="text-lg font-bold">Legal Metrology</p>
-              <p className="text-sm text-blue-100">Compliance Portal</p>
+              <p className="text-3xl font-extrabold tracking-tight">MAPAK</p>
+              <p className="text-base font-medium text-blue-100">Legal Metrology Portal</p>
             </div>
           </div>
 
@@ -142,17 +140,15 @@ export function LoginPage() {
         <section className="flex items-center justify-center p-6 sm:p-10">
           <div className="w-full max-w-md">
             <div className="mb-8 lg:hidden">
-              <div className="flex items-center gap-3">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-600 text-white">
-                  <ShieldCheck className="h-6 w-6" />
-                </div>
+              <div className="flex items-center gap-4">
+                <img src="/src/assets/mapak-logo.png" alt="MAPAK Logo" className="h-16 w-16 object-contain" />
 
                 <div>
-                  <p className="text-lg font-bold text-slate-900">
-                    Legal Metrology
+                  <p className="text-3xl font-extrabold tracking-tight text-slate-900">
+                    MAPAK
                   </p>
-                  <p className="text-sm text-slate-500">
-                    Compliance Portal
+                  <p className="text-base font-medium text-slate-500">
+                    Legal Metrology Portal
                   </p>
                 </div>
               </div>
