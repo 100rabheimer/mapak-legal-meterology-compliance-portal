@@ -105,7 +105,16 @@ function getAuthHeader(): Record<string, string> {
   return token ? { Authorization: `Bearer ${token}` } : {};
 }
 
-export async function loginApi(email: str, password: str): Promise<TokenResponse> {
+export interface RegisterPayload {
+  full_name: string;
+  email: string;
+  password: string;
+  role?: string;
+  badge_number?: string;
+  jurisdiction_zone?: string;
+}
+
+export async function loginApi(email: string, password: string): Promise<TokenResponse> {
   const res = await fetch(`${API_BASE_URL}/api/v1/auth/login`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -115,6 +124,24 @@ export async function loginApi(email: str, password: str): Promise<TokenResponse
   if (!res.ok) {
     const errorData = await res.json().catch(() => ({ detail: "Authentication failed" }));
     throw new Error(errorData.detail || "Authentication failed");
+  }
+
+  const data: TokenResponse = await res.json();
+  localStorage.setItem("access_token", data.access_token);
+  localStorage.setItem("user_profile", JSON.stringify(data.user));
+  return data;
+}
+
+export async function registerApi(payload: RegisterPayload): Promise<TokenResponse> {
+  const res = await fetch(`${API_BASE_URL}/api/v1/auth/register`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  });
+
+  if (!res.ok) {
+    const errorData = await res.json().catch(() => ({ detail: "Registration failed" }));
+    throw new Error(errorData.detail || "Registration failed");
   }
 
   const data: TokenResponse = await res.json();

@@ -21,14 +21,14 @@ from src.pipeline_bridge import InspectionPipelineBridge
 from src.notice_generator import LegalNoticeGenerator
 from src.utils import generate_notice_number, format_timestamp, sanitize_filename
 from app.models import (
-    LoginRequest, TokenResponse, UserProfile, RuleModel,
+    LoginRequest, RegisterRequest, TokenResponse, UserProfile, RuleModel,
     NoticeGenerationRequest, NoticeResponseModel, SamplePackageInfo,
     AnalyticsOverviewResponse
 )
 from app.database_orm import (
     init_db_orm, SessionLocal, User, Inspection, InspectionPanel,
     ExtractedDeclaration, StatutoryViolation, LegalNotice, AuditLog,
-    verify_password
+    verify_password, hash_password
 )
 from app.auth import get_db, create_access_token, get_current_user, require_admin
 
@@ -82,6 +82,55 @@ def get_notice_gen() -> LegalNoticeGenerator:
 # -------------------------------------------------------------------
 # AUTHENTICATION ENDPOINTS
 # -------------------------------------------------------------------
+
+@app.post("/api/v1/auth/register", response_model=TokenResponse)
+@app.post("/api/auth/register", response_model=TokenResponse)
+def register(req: RegisterRequest, db: Session = Depends(get_db)):
+    """Self-registration endpoint for first-time officers and enforcement personnel."""
+    clean_email = req.email.strip().lower()
+    if not clean_email or "@" not in clean_email:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="A valid email address is required for registration."
+        )
+    if not req.password or len(req.password.strip()) < 4:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Password must be at least 4 characters long."
+        )
+
+    existing = db.query(User).filter(User.email == clean_email).first()
+    if existing:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=f"An account with email '{clean_email}' already exists. Please sign in instead."
+        )
+
+    role_val = req.role.strip().upper() if req.role else "OFFICER"
+    new_user = User(
+        user_id=f"USR-{role_val[:3]}-{uuid.uuid4().hex[:6].upper()}",
+        email=clean_email,
+        hashed_password=hash_password(req.password),
+        full_name=req.full_name.strip(),
+        role=role_val,
+        badge_number=req.badge_number.strip() if req.badge_number and req.badge_number.strip() else f"LM-WB-2026-{uuid.uuid4().hex[:4].upper()}",
+        jurisdiction_zone=req.jurisdiction_zone.strip() if req.jurisdiction_zone and req.jurisdiction_zone.strip() else "Northern Enforcement Zone, New Delhi",
+        is_active=True
+    )
+    db.add(new_user)
+    db.commit()
+    db.refresh(new_user)
+
+    access_token = create_access_token(data={"sub": new_user.email, "role": new_user.role})
+    profile = UserProfile(
+        user_id=new_user.user_id,
+        email=new_user.email,
+        full_name=new_user.full_name,
+        role=new_user.role,
+        badge_number=new_user.badge_number,
+        jurisdiction_zone=new_user.jurisdiction_zone
+    )
+    return TokenResponse(access_token=access_token, user=profile)
 
 @app.post("/api/v1/auth/login", response_model=TokenResponse)
 @app.post("/api/auth/login", response_model=TokenResponse)

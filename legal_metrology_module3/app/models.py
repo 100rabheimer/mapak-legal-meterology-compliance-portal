@@ -5,6 +5,14 @@ class LoginRequest(BaseModel):
     email: str
     password: str
 
+class RegisterRequest(BaseModel):
+    full_name: str
+    email: str
+    password: str
+    role: str = "OFFICER"
+    badge_number: Optional[str] = None
+    jurisdiction_zone: Optional[str] = None
+
 class UserProfile(BaseModel):
     user_id: str
     email: str
