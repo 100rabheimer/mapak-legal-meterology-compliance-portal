@@ -15,7 +15,6 @@ import {
   ArrowRight,
   UserCheck,
   KeyRound,
-  Info,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useAuthStore } from "../stores/authStores";
@@ -422,26 +421,11 @@ export function LoginPage() {
                           Administrator
                         </p>
                         <p className="text-xs text-slate-500">
-                          Single Master Account
+                          Manage rules & officers
                         </p>
                       </button>
                     </div>
                   </div>
-
-                  {/* Single Admin Info Callout */}
-                  {role === "admin" && (
-                    <div className="rounded-xl border border-indigo-200 bg-indigo-50/80 p-3.5 text-xs text-indigo-900">
-                      <div className="flex items-start gap-2">
-                        <Info className="h-4 w-4 shrink-0 text-indigo-600 mt-0.5" />
-                        <div>
-                          <p className="font-semibold">How Admin Access Works (1 Master Admin):</p>
-                          <p className="mt-1 text-indigo-700 leading-relaxed">
-                            Under statutory security policies, the system operates with <strong>exactly 1 Master Administrator</strong> (Director S. K. Sharma, Central HQ). Use the pre-configured credentials below to access rule configurations and officer approvals.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  )}
 
                   <div>
                     <label
@@ -582,20 +566,7 @@ export function LoginPage() {
                   </p>
                 </div>
 
-                {/* Explanation about single admin */}
-                <div className="mt-4 rounded-xl border border-amber-200 bg-amber-50 p-3.5 text-xs text-amber-900">
-                  <div className="flex items-start gap-2">
-                    <ShieldCheck className="h-4 w-4 shrink-0 text-amber-600 mt-0.5" />
-                    <div>
-                      <span className="font-semibold">Notice regarding Administrator Account:</span>
-                      <p className="mt-0.5 text-amber-800 leading-relaxed">
-                        To preserve sovereign security, <strong>there is only 1 Master Administrator account</strong> in the MAPAK portal. Admin cannot be registered publicly. To access admin capabilities, switch to <strong>Sign In</strong> and use Master Admin credentials.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <form onSubmit={handleRegisterOfficer} className="mt-5 space-y-4">
+                <form onSubmit={handleRegisterOfficer} className="mt-6 space-y-4">
                   {/* Full Name */}
                   <div>
                     <label
