@@ -14,7 +14,6 @@ import {
   AlertCircle,
   ArrowRight,
   UserCheck,
-  KeyRound,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useAuthStore } from "../stores/authStores";
@@ -490,32 +489,23 @@ export function LoginPage() {
                     </div>
                   </div>
 
-                  {/* Quick-Fill buttons */}
+                  {/* Credentials options */}
                   <div className="flex items-center justify-between pt-1">
+                    <label className="flex items-center gap-2 text-xs text-slate-600">
+                      <input
+                        type="checkbox"
+                        defaultChecked
+                        className="h-4 w-4 rounded border-slate-300 text-blue-600"
+                      />
+                      Remember credentials
+                    </label>
+
                     <button
                       type="button"
-                      onClick={() => {
-                        if (role === "admin") {
-                          setIdentifier("admin@doca.gov.in");
-                          setPassword("admin123");
-                        } else {
-                          setIdentifier("officer@doca.gov.in");
-                          setPassword("officer123");
-                        }
-                      }}
-                      className="inline-flex items-center gap-1 text-xs font-semibold text-blue-600 hover:text-blue-800"
+                      className="text-xs font-semibold text-blue-600 hover:text-blue-700"
                     >
-                      <KeyRound className="h-3.5 w-3.5" />
-                      <span>
-                        {role === "admin"
-                          ? "Fill Master Admin (admin@doca.gov.in)"
-                          : "Fill Demo Officer (officer@doca.gov.in)"}
-                      </span>
+                      Forgot password?
                     </button>
-
-                    <span className="text-xs text-slate-400">
-                      {role === "admin" ? "Password: admin123" : "Password: officer123"}
-                    </span>
                   </div>
 
                   <button
