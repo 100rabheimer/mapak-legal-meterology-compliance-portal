@@ -14,6 +14,8 @@ import {
   AlertCircle,
   ArrowRight,
   UserCheck,
+  KeyRound,
+  Info,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useAuthStore } from "../stores/authStores";
@@ -25,19 +27,19 @@ export function LoginPage() {
   const navigate = useNavigate();
   const login = useAuthStore((state) => state.login);
 
+  // Tab mode: "login" or "register"
   const [authMode, setAuthMode] = useState<"login" | "register">("login");
 
-  // Login states
+  // Sign In states
   const [showPassword, setShowPassword] = useState(false);
   const [identifier, setIdentifier] = useState("officer@doca.gov.in");
   const [password, setPassword] = useState("officer123");
   const [role, setRole] = useState<UserRole>("officer");
 
-  // Registration states
+  // Officer Registration states
   const [regFullName, setRegFullName] = useState("");
   const [regEmail, setRegEmail] = useState("");
   const [regPassword, setRegPassword] = useState("");
-  const [regRole, setRegRole] = useState<UserRole>("officer");
   const [regBadgeNumber, setRegBadgeNumber] = useState("");
   const [regJurisdiction, setRegJurisdiction] = useState(
     "Northern Enforcement Zone, New Delhi"
@@ -48,6 +50,19 @@ export function LoginPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const [successMsg, setSuccessMsg] = useState("");
+
+  // Quick-fill helper for ease of access
+  const handleSelectRole = (selectedRole: UserRole) => {
+    setRole(selectedRole);
+    setError("");
+    if (selectedRole === "admin") {
+      setIdentifier("admin@doca.gov.in");
+      setPassword("admin123");
+    } else {
+      setIdentifier("officer@doca.gov.in");
+      setPassword("officer123");
+    }
+  };
 
   const handleLogin = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -85,7 +100,7 @@ export function LoginPage() {
       // Fallback local auth for dev/demo mode
       const user = {
         id: role === "admin" ? "admin-001" : "officer-001",
-        name: role === "admin" ? "System Administrator" : "Sh. R. K. Verma",
+        name: role === "admin" ? "Director S. K. Sharma (Master Admin)" : "Sh. R. K. Verma",
         email: role === "admin" ? "admin@doca.gov.in" : identifier,
         role,
         isActive: true,
@@ -95,7 +110,10 @@ export function LoginPage() {
               officerId: "LM-WB-2026-0148",
               jurisdiction: "Northern Enforcement Zone, New Delhi",
             }
-          : {}),
+          : {
+              officerId: "LM-HQ-2026-0001",
+              jurisdiction: "Central Enforcement Headquarters, New Delhi",
+            }),
       };
 
       login(user, "demo-fallback-jwt-token");
@@ -109,13 +127,13 @@ export function LoginPage() {
     }
   };
 
-  const handleRegister = async (event: React.FormEvent<HTMLFormElement>) => {
+  const handleRegisterOfficer = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setError("");
     setSuccessMsg("");
 
     if (!regFullName.trim()) {
-      setError("Please enter your full name.");
+      setError("Please enter officer's full name.");
       return;
     }
     if (!regEmail.trim() || !regEmail.includes("@")) {
@@ -134,7 +152,7 @@ export function LoginPage() {
         full_name: regFullName.trim(),
         email: regEmail.trim(),
         password: regPassword,
-        role: regRole,
+        role: "OFFICER",
         badge_number: regBadgeNumber.trim() || undefined,
         jurisdiction_zone: regJurisdiction.trim() || undefined,
       });
@@ -143,7 +161,7 @@ export function LoginPage() {
         id: res.user.user_id,
         name: res.user.full_name,
         email: res.user.email,
-        role: res.user.role.toLowerCase() as UserRole,
+        role: "officer" as UserRole,
         isActive: true,
         createdAt: new Date().toISOString(),
         officerId: res.user.badge_number || "LM-WB-2026-0148",
@@ -152,46 +170,38 @@ export function LoginPage() {
       };
 
       setSuccessMsg(
-        "Account created successfully! Preparing your compliance workspace..."
+        "Officer account registered successfully! Entering workspace..."
       );
       setTimeout(() => {
         login(userPayload, res.access_token);
         setIsLoading(false);
-        if (userPayload.role === "admin") {
-          navigate("/admin/dashboard");
-        } else {
-          navigate("/");
-        }
+        navigate("/");
       }, 700);
     } catch (err: any) {
-      console.warn("Backend registration failed:", err);
+      console.warn("Backend officer registration failed:", err);
       if (err.message && err.message.toLowerCase().includes("already exists")) {
         setError(err.message);
         setIsLoading(false);
         return;
       }
 
-      // Offline / fallback registration
+      // Offline / demo fallback registration
       const user = {
-        id: `usr-${Date.now().toString(36)}`,
+        id: `usr-off-${Date.now().toString(36)}`,
         name: regFullName.trim(),
         email: regEmail.trim(),
-        role: regRole,
+        role: "officer" as UserRole,
         isActive: true,
         createdAt: new Date().toISOString(),
         officerId: regBadgeNumber.trim() || "LM-DL-2026-0421",
         jurisdiction: regJurisdiction || "Northern Enforcement Zone, New Delhi",
       };
 
-      setSuccessMsg("Registration verified! Accessing enforcement dashboard...");
+      setSuccessMsg("Officer registration verified! Launching dashboard...");
       setTimeout(() => {
         login(user, "demo-registered-jwt-token");
         setIsLoading(false);
-        if (regRole === "admin") {
-          navigate("/admin/dashboard");
-        } else {
-          navigate("/");
-        }
+        navigate("/");
       }, 700);
     }
   };
@@ -243,14 +253,14 @@ export function LoginPage() {
               <div className="flex items-center gap-3">
                 <BadgeCheck className="h-5 w-5 text-blue-200" />
                 <span className="text-sm text-blue-50">
-                  Evidence-based compliance reporting & Rule 7 font analysis
+                  Statutory Rule 7 numeral height verification & defect penalty analysis
                 </span>
               </div>
 
               <div className="flex items-center gap-3">
                 <BadgeCheck className="h-5 w-5 text-blue-200" />
                 <span className="text-sm text-blue-50">
-                  Self-service registration for first-time enforcement officers
+                  Dedicated Officer Registration & Single Master Admin Control
                 </span>
               </div>
             </div>
@@ -262,7 +272,7 @@ export function LoginPage() {
           </div>
         </section>
 
-        {/* Right Auth Forms */}
+        {/* Right Auth Section */}
         <section className="flex items-center justify-center p-6 sm:p-10">
           <div className="w-full max-w-md">
             {/* Mobile Header */}
@@ -285,7 +295,7 @@ export function LoginPage() {
               </div>
             </div>
 
-            {/* Mode Switcher Tabs */}
+            {/* Mode Switcher Tabs: Sign In vs Officer Register */}
             <div className="mb-6 flex rounded-xl bg-slate-100 p-1">
               <button
                 type="button"
@@ -307,7 +317,7 @@ export function LoginPage() {
 
               <button
                 type="button"
-                id="tab-first-time-register"
+                id="tab-officer-register"
                 onClick={() => {
                   setAuthMode("register");
                   setError("");
@@ -315,14 +325,14 @@ export function LoginPage() {
                 }}
                 className={`flex flex-1 items-center justify-center gap-2 rounded-lg py-2.5 text-sm font-semibold transition ${
                   authMode === "register"
-                    ? "bg-white text-blue-700 shadow-xs"
+                    ? "bg-white text-emerald-700 shadow-xs"
                     : "text-slate-600 hover:text-slate-900"
                 }`}
               >
                 <UserPlus className="h-4 w-4 text-emerald-600" />
-                <span>First-Time User</span>
+                <span>Officer Register</span>
                 <span className="rounded-full bg-emerald-100 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-emerald-700">
-                  Register
+                  New
                 </span>
               </button>
             </div>
@@ -349,29 +359,28 @@ export function LoginPage() {
             )}
 
             {authMode === "login" ? (
-              /* ================= LOGIN FORM ================= */
+              /* ================= SIGN IN FORM ================= */
               <div>
                 <div>
                   <h2 className="text-2xl font-bold tracking-tight text-slate-900">
-                    Welcome back
+                    Sign In
                   </h2>
 
                   <p className="mt-1 text-sm text-slate-500">
-                    Sign in to access your compliance dashboard and inspection
-                    records.
+                    Access your enforcement workspace or admin control center.
                   </p>
                 </div>
 
                 <form onSubmit={handleLogin} className="mt-6 space-y-4">
                   <div>
                     <label className="mb-2 block text-sm font-semibold text-slate-700">
-                      Login as
+                      Sign in as
                     </label>
 
                     <div className="grid grid-cols-2 gap-3">
                       <button
                         type="button"
-                        onClick={() => setRole("officer")}
+                        onClick={() => handleSelectRole("officer")}
                         className={`rounded-xl border p-3.5 text-left transition ${
                           role === "officer"
                             ? "border-blue-600 bg-blue-50 ring-2 ring-blue-100"
@@ -389,23 +398,23 @@ export function LoginPage() {
                           Officer
                         </p>
                         <p className="text-xs text-slate-500">
-                          Manage assigned inspections
+                          Field inspections & notices
                         </p>
                       </button>
 
                       <button
                         type="button"
-                        onClick={() => setRole("admin")}
+                        onClick={() => handleSelectRole("admin")}
                         className={`rounded-xl border p-3.5 text-left transition ${
                           role === "admin"
-                            ? "border-blue-600 bg-blue-50 ring-2 ring-blue-100"
+                            ? "border-indigo-600 bg-indigo-50 ring-2 ring-indigo-100"
                             : "border-slate-200 bg-white hover:border-slate-300"
                         }`}
                       >
                         <ShieldCheck
                           className={`h-5 w-5 ${
                             role === "admin"
-                              ? "text-blue-600"
+                              ? "text-indigo-600"
                               : "text-slate-500"
                           }`}
                         />
@@ -413,11 +422,26 @@ export function LoginPage() {
                           Administrator
                         </p>
                         <p className="text-xs text-slate-500">
-                          Manage rules & officers
+                          Single Master Account
                         </p>
                       </button>
                     </div>
                   </div>
+
+                  {/* Single Admin Info Callout */}
+                  {role === "admin" && (
+                    <div className="rounded-xl border border-indigo-200 bg-indigo-50/80 p-3.5 text-xs text-indigo-900">
+                      <div className="flex items-start gap-2">
+                        <Info className="h-4 w-4 shrink-0 text-indigo-600 mt-0.5" />
+                        <div>
+                          <p className="font-semibold">How Admin Access Works (1 Master Admin):</p>
+                          <p className="mt-1 text-indigo-700 leading-relaxed">
+                            Under statutory security policies, the system operates with <strong>exactly 1 Master Administrator</strong> (Director S. K. Sharma, Central HQ). Use the pre-configured credentials below to access rule configurations and officer approvals.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
 
                   <div>
                     <label
@@ -425,13 +449,13 @@ export function LoginPage() {
                       className="mb-1.5 block text-sm font-semibold text-slate-700"
                     >
                       {role === "admin"
-                        ? "Administrator ID"
-                        : "Official email address"}
+                        ? "Master Administrator Email"
+                        : "Official Email Address"}
                     </label>
 
                     <input
                       id="identifier"
-                      type={role === "admin" ? "text" : "email"}
+                      type="email"
                       value={identifier}
                       onChange={(e) => setIdentifier(e.target.value)}
                       className="form-input"
@@ -482,41 +506,54 @@ export function LoginPage() {
                     </div>
                   </div>
 
+                  {/* Quick-Fill buttons */}
                   <div className="flex items-center justify-between pt-1">
-                    <label className="flex items-center gap-2 text-xs text-slate-600">
-                      <input
-                        type="checkbox"
-                        defaultChecked
-                        className="h-4 w-4 rounded border-slate-300 text-blue-600"
-                      />
-                      Remember credentials
-                    </label>
-
                     <button
                       type="button"
-                      onClick={() =>
-                        alert(
-                          "Demo reset: Default accounts are officer@doca.gov.in (officer123) and admin@doca.gov.in (admin123)."
-                        )
-                      }
-                      className="text-xs font-semibold text-blue-600 hover:text-blue-700"
+                      onClick={() => {
+                        if (role === "admin") {
+                          setIdentifier("admin@doca.gov.in");
+                          setPassword("admin123");
+                        } else {
+                          setIdentifier("officer@doca.gov.in");
+                          setPassword("officer123");
+                        }
+                      }}
+                      className="inline-flex items-center gap-1 text-xs font-semibold text-blue-600 hover:text-blue-800"
                     >
-                      Forgot password?
+                      <KeyRound className="h-3.5 w-3.5" />
+                      <span>
+                        {role === "admin"
+                          ? "Fill Master Admin (admin@doca.gov.in)"
+                          : "Fill Demo Officer (officer@doca.gov.in)"}
+                      </span>
                     </button>
+
+                    <span className="text-xs text-slate-400">
+                      {role === "admin" ? "Password: admin123" : "Password: officer123"}
+                    </span>
                   </div>
 
                   <button
                     type="submit"
                     disabled={isLoading}
-                    className="mt-2 flex w-full items-center justify-center rounded-xl bg-blue-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:bg-slate-300"
+                    className={`mt-2 flex w-full items-center justify-center rounded-xl px-4 py-3 text-sm font-semibold text-white transition disabled:cursor-not-allowed disabled:bg-slate-300 ${
+                      role === "admin"
+                        ? "bg-indigo-600 hover:bg-indigo-700"
+                        : "bg-blue-600 hover:bg-blue-700"
+                    }`}
                   >
-                    {isLoading ? "Signing in..." : "Sign in securely"}
+                    {isLoading
+                      ? "Authenticating..."
+                      : role === "admin"
+                      ? "Sign In as Administrator"
+                      : "Sign In as Officer"}
                   </button>
                 </form>
 
-                <div className="mt-6 rounded-xl border border-dashed border-blue-200 bg-blue-50/50 p-4 text-center">
+                <div className="mt-6 rounded-xl border border-dashed border-emerald-200 bg-emerald-50/50 p-4 text-center">
                   <p className="text-xs text-slate-600">
-                    First time accessing the portal?
+                    Are you a new Legal Metrology Enforcement Officer?
                   </p>
                   <button
                     type="button"
@@ -525,7 +562,7 @@ export function LoginPage() {
                       setError("");
                       setSuccessMsg("");
                     }}
-                    className="mt-1.5 inline-flex items-center gap-1 text-sm font-semibold text-blue-600 hover:text-blue-800"
+                    className="mt-1.5 inline-flex items-center gap-1 text-sm font-semibold text-emerald-700 hover:text-emerald-900"
                   >
                     <span>Register your officer account</span>
                     <ArrowRight className="h-3.5 w-3.5" />
@@ -533,84 +570,39 @@ export function LoginPage() {
                 </div>
               </div>
             ) : (
-              /* ================= FIRST-TIME REGISTRATION FORM ================= */
+              /* ================= OFFICER REGISTRATION FORM ================= */
               <div>
                 <div>
                   <h2 className="text-2xl font-bold tracking-tight text-slate-900">
-                    First-Time Registration
+                    Officer Registration
                   </h2>
 
                   <p className="mt-1 text-sm text-slate-500">
-                    Register your officer or administrator profile before your
-                    first login.
+                    Register a new Legal Metrology Officer / Inspector account before signing in.
                   </p>
                 </div>
 
-                <form onSubmit={handleRegister} className="mt-6 space-y-4">
-                  {/* Role Selector */}
-                  <div>
-                    <label className="mb-2 block text-sm font-semibold text-slate-700">
-                      Register as
-                    </label>
-
-                    <div className="grid grid-cols-2 gap-3">
-                      <button
-                        type="button"
-                        onClick={() => setRegRole("officer")}
-                        className={`rounded-xl border p-3.5 text-left transition ${
-                          regRole === "officer"
-                            ? "border-blue-600 bg-blue-50 ring-2 ring-blue-100"
-                            : "border-slate-200 bg-white hover:border-slate-300"
-                        }`}
-                      >
-                        <UserRound
-                          className={`h-5 w-5 ${
-                            regRole === "officer"
-                              ? "text-blue-600"
-                              : "text-slate-500"
-                          }`}
-                        />
-                        <p className="mt-2 text-sm font-semibold text-slate-800">
-                          Enforcement Officer
-                        </p>
-                        <p className="text-xs text-slate-500">
-                          Conduct packaging audits
-                        </p>
-                      </button>
-
-                      <button
-                        type="button"
-                        onClick={() => setRegRole("admin")}
-                        className={`rounded-xl border p-3.5 text-left transition ${
-                          regRole === "admin"
-                            ? "border-blue-600 bg-blue-50 ring-2 ring-blue-100"
-                            : "border-slate-200 bg-white hover:border-slate-300"
-                        }`}
-                      >
-                        <ShieldCheck
-                          className={`h-5 w-5 ${
-                            regRole === "admin"
-                              ? "text-blue-600"
-                              : "text-slate-500"
-                          }`}
-                        />
-                        <p className="mt-2 text-sm font-semibold text-slate-800">
-                          Administrator
-                        </p>
-                        <p className="text-xs text-slate-500">
-                          Configure rules & portal
-                        </p>
-                      </button>
+                {/* Explanation about single admin */}
+                <div className="mt-4 rounded-xl border border-amber-200 bg-amber-50 p-3.5 text-xs text-amber-900">
+                  <div className="flex items-start gap-2">
+                    <ShieldCheck className="h-4 w-4 shrink-0 text-amber-600 mt-0.5" />
+                    <div>
+                      <span className="font-semibold">Notice regarding Administrator Account:</span>
+                      <p className="mt-0.5 text-amber-800 leading-relaxed">
+                        To preserve sovereign security, <strong>there is only 1 Master Administrator account</strong> in the MAPAK portal. Admin cannot be registered publicly. To access admin capabilities, switch to <strong>Sign In</strong> and use Master Admin credentials.
+                      </p>
                     </div>
                   </div>
+                </div>
 
+                <form onSubmit={handleRegisterOfficer} className="mt-5 space-y-4">
                   {/* Full Name */}
                   <div>
                     <label
                       htmlFor="reg-name"
                       className="mb-1.5 block text-sm font-semibold text-slate-700"
                     >
-                      Full Name *
+                      Officer Full Name *
                     </label>
                     <div className="relative">
                       <UserRound className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
@@ -654,7 +646,7 @@ export function LoginPage() {
                       htmlFor="reg-password"
                       className="mb-1.5 block text-sm font-semibold text-slate-700"
                     >
-                      Password *
+                      Create Password *
                     </label>
                     <div className="relative">
                       <LockKeyhole className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
@@ -664,7 +656,7 @@ export function LoginPage() {
                         value={regPassword}
                         onChange={(e) => setRegPassword(e.target.value)}
                         className="form-input pl-11 pr-12"
-                        placeholder="Create a strong password"
+                        placeholder="Minimum 4 characters"
                         required
                         minLength={4}
                       />
@@ -714,7 +706,7 @@ export function LoginPage() {
                       htmlFor="reg-jurisdiction"
                       className="mb-1.5 block text-sm font-semibold text-slate-700"
                     >
-                      Jurisdiction Zone
+                      Assigned Jurisdiction Zone
                     </label>
                     <div className="relative">
                       <MapPin className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
@@ -749,22 +741,22 @@ export function LoginPage() {
                   {/* Submit Button */}
                   <button
                     type="submit"
-                    id="btn-register-submit"
+                    id="btn-register-officer"
                     disabled={isLoading}
                     className="mt-3 flex w-full items-center justify-center gap-2 rounded-xl bg-emerald-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-emerald-700 disabled:cursor-not-allowed disabled:bg-slate-300"
                   >
                     <UserPlus className="h-4 w-4" />
                     <span>
                       {isLoading
-                        ? "Registering Account..."
-                        : "Complete Registration & Enter"}
+                        ? "Registering Officer Account..."
+                        : "Register Officer & Launch Portal"}
                     </span>
                   </button>
                 </form>
 
                 <div className="mt-5 text-center">
                   <p className="text-xs text-slate-500">
-                    Already registered?{" "}
+                    Already have an account?{" "}
                     <button
                       type="button"
                       onClick={() => {

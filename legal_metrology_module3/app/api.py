@@ -107,6 +107,14 @@ def register(req: RegisterRequest, db: Session = Depends(get_db)):
         )
 
     role_val = req.role.strip().upper() if req.role else "OFFICER"
+    if role_val == "ADMIN":
+        admin_count = db.query(User).filter(User.role == "ADMIN").count()
+        if admin_count >= 1:
+            raise HTTPException(
+                status_code=status.HTTP_403_FORBIDDEN,
+                detail="Statutory Restriction: Only 1 Master Administrator is permitted in the system. Please sign in using the Master Administrator account (admin@doca.gov.in)."
+            )
+
     new_user = User(
         user_id=f"USR-{role_val[:3]}-{uuid.uuid4().hex[:6].upper()}",
         email=clean_email,
